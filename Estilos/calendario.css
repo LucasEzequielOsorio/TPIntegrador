@@ -1,0 +1,92 @@
+.body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.calendar_section
+{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.calendar_title
+{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+}
+.calendar_month
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.calendar
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.calendar_nav_button
+{
+    text-decoration: none;
+    color: gray;
+    border-radius: 1rem;
+    border: 1px solid lightgray;
+    padding: 0.5rem;
+}
+.calendar_container
+{
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(7, 14.28571429%);
+}
+.calendar_day
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.calendar_item
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+}
+.calendar_item_disabled
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+}
+.calendar_item_courses_container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.calendar_item_virtual_course
+{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background-color: blue;
+    text-decoration: none;
+    color: white;
+}
+.calendar_item_presential_course
+{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background-color: red;
+    text-decoration: none;
+    color: white;
+}
