@@ -1,0 +1,147 @@
+.gift_card_personalization_section
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 100%;
+}
+.gift_card_personalization_dashboard
+{
+    width: 40%;
+    text-align: center;
+}
+.gift_card_personalization_dashboard_row
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid lightgray;
+}
+.gift_card_personalization_dashboard_input
+{
+    height: 1.5rem;
+}
+.gift_card_personalization_dashboard_radio_container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 5rem;
+}
+.gift_card_personalization_radio_label
+{
+    margin-bottom: 1rem;
+}
+.left
+{
+    justify-content: left;
+    border-left: 0px;
+}
+.left *
+{
+    margin-right: 1rem;
+}
+.center
+{
+    justify-content: center;
+    border-left: 0px;
+}
+.gift_card_personalization_background_solid
+{
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: gray;
+}
+.gift_card_personalization_background_linear_gradient
+{
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: linear-gradient(gray, black);
+}
+.gift_card_personalization_background_radial_gradient
+{
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: radial-gradient(gray, black);
+}
+.gift_card_personalization_background_stripes
+{
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: linear-gradient(gray, 20%, black, 30%, gray, 50%, black, 60%, gray, 80%, black, 90%, gray)
+}
+.gift_card_personalization_background_stripes span
+{
+    display: none;
+}
+.gift_card_personalization_background_radial_gradient span
+{
+    display: none;
+}
+.gift_card_personalization_background_solid span
+{
+    display: none;
+}
+.gift_card_personalization_background_linear_gradient span
+{
+    display: none;
+}
+.submit_button
+{
+    margin-top: 2rem;
+    padding: 0.5rem;
+    justify-self: center;
+}
+.gift_card_preview_container
+{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 40%;
+}
+.gift_card_preview
+{
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 15% 70% 15%;
+    background-color: gray;
+    height: 30rem;
+    width: 100%;
+    margin-top: 4rem;
+}
+.gift_card_preview_amount
+{
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.gift_card_preview_center
+{
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.gift_card_preview_text
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.gift_card_preview_name
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+}
