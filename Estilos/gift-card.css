@@ -1,3 +1,23 @@
+.body
+{
+    background-color: whitesmoke;
+}
+.navbar
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.navbar a
+{
+    display: block;
+    margin: 0 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: black;
+    background-color: lightgray;
+}
 .gift_card_personalization_section
 {
     display: flex;
