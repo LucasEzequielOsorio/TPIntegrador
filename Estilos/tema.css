@@ -2,8 +2,15 @@
 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+body
+{
+    margin-top: 0;
+}
 #header
 {
+    position: sticky;
+    background-color: whitesmoke;
+    top: 0;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     width: 100%;
@@ -78,17 +85,18 @@
 {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
-    height: 20rem;
+    height: 15rem;
     justify-content: space-around;
-    align-items: center;
+    align-items: top;
     margin-top: 2rem;
     border-top: 1px solid lightgray;
 }
 .footer_item
 {
     display: block;
-    width: 25%;
+    margin-top: 2rem;
     height: 10rem;
     border: 1px solid lightgray;
 }
@@ -111,4 +119,49 @@
     text-decoration: none;
     color: black;
 }
+@media screen and (max-width: 480px){
+    .hide_on_mobile
+    {
+        display: none;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .hide_on_tablet
+    {
+        display: none;
+    }
+}
+@media screen and (min-width: 769px){
+    .hide_on_desktop
+    {
+        display: none;
+    }
+    .logo_tiny
+    {
+        display: none;
+    }
+    .footer_item
+    {
+        width: 25%;
+    }
+}
 
+@media screen and (max-width: 768px){
+    .logo_desktop
+    {
+        display: none;
+    }
+    .search_bar input
+    {
+        width: 20vw;
+        margin-right: 2vw;
+    }
+    .search_bar button
+    {
+        margin-left: 2vw;
+    }
+    .footer_item
+    {
+        width: 80%;
+    }
+}

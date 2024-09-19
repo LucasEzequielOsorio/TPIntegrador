@@ -1,6 +1,9 @@
 const header = `
-    <a href="../index.html" class="logo">
+    <a href="../index.html" class="logo logo_desktop">
         <span class="logo_black">Cours</span><span class="logo_blue">Ed</span>
+    </a>
+    <a href="../index.html" class="logo logo_tiny">
+        <span class="logo_black">C:</span><span class="logo_blue">Ed</span>
     </a>
     <form class="search_bar">
         <input list="courses" name="course" id="course">

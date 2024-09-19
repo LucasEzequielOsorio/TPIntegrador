@@ -101,3 +101,23 @@
     text-decoration: none;
     color: white;
 }
+@media screen and (max-width: 480px) {
+    .calendar_container
+    {
+        width: 98vw;
+    }
+    .calendar_item, .calendar_item_disabled
+    {
+        font-size: 0.7rem;
+    }
+    .calendar_item_courses_container
+    {
+        font-size: 0.5rem;
+    }
+    .calendar_item_courses_container *
+    {
+        padding: 0.25rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
