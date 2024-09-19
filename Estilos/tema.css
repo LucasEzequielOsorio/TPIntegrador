@@ -1,16 +1,81 @@
-#header
+*
 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: row;
+}
+#header
+{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
     width: 100%;
-    justify-content: space-between;
+    align-items: center;
     height: 4rem;
     border-bottom: 1px solid lightgray;
 }
+.logo
+{
+    padding: 0.5rem;
+    grid-column: 1;
+    font-size: 2rem;
+    text-decoration: none;
+
+}
+.logo_black
+{
+    color: black;
+}
+.logo_blue
+{
+    color: blue;
+}
+.search_bar
+{
+    justify-self: center;
+    grid-column: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    height: 2rem;
+}
+.search_bar input
+{
+    border: 1px solid lightgray;
+    padding: 0 1rem 0 1rem;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+}
+.search_bar button
+{
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    padding: 0 0.5rem 0 0.5rem;
+    border-radius: 1rem;
+    margin-left: 0.5rem;
+}
+.cart_logo
+{
+    background: no-repeat center url(../imagenes/carrito.png);
+    background-size: contain;
+    grid-column: 3;
+    justify-self: right;
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    text-decoration: none;
+}
+.cart_logo span
+{
+    font-size: 0.5rem;
+    padding: 0.25rem;
+    background-color: red;
+    border-radius: 1rem;
+}
 #footer
 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: row;
     width: 100%;
