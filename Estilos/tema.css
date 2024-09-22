@@ -122,12 +122,13 @@ body *
 {
     display: block;
     margin-top: 2rem;
-    height: 10rem;
+    padding-bottom: 1rem;
     border: 1px solid lightgray;
 }
 .footer_item *
 {
-    margin-left: 20%;
+    margin-left: 10%;
+    width: 90%;
     list-style: none;
     padding-left: 0;
 }

@@ -108,6 +108,7 @@
 {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-direction: column;
     width: 40%;
 }
@@ -158,12 +159,14 @@
     }
     .gift_card_preview_container
     {
-        width: 75vw;
+        width: 100vw;
+        background-color: whitesmoke;
         position: sticky;
         top: 2rem;
     }
     .gift_card_preview
     {
+        width: 75vw;
         height: 75vw;
     }
     .gift_card_personalization_dashboard
@@ -180,12 +183,14 @@
     }
     .gift_card_preview_container
     {
-        width: 60vw;
+        width: 100%;
         position: sticky;
+        background-color: whitesmoke;
         top: 2rem;
     }
     .gift_card_preview
     {
+        width: 60vw;
         height: 60vw;
     }
     .gift_card_personalization_dashboard

@@ -22,6 +22,9 @@ const footer = `
         <h4>El grupo</h4>
         <ul>
             <li>Lucas Osorio, DNI 45.753.437</li>
+            <li>Federico García, DNI 38.511.888</li>
+            <li>Santiago Muse, DNI 45.921.974</li>
+            <li>Francisco González, DNI 39.512.972</li>
         </ul>
     </div>
     <div class="footer_item">
