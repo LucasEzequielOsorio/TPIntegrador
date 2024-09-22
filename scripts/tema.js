@@ -21,10 +21,7 @@ const footer = `
     <div class="footer_item">
         <h4>El grupo</h4>
         <ul>
-            <li>Juan</li>
-            <li>Enrique</li>
-            <li>Julián</li>
-            <li>Manolo</li>
+            <li>Lucas Osorio, DNI 45.753.437</li>
         </ul>
     </div>
     <div class="footer_item">
@@ -39,5 +36,10 @@ const footer = `
             <li><a href="https://facebook.com">Facebook</a></li>
         </ul>
     </div>`;
+const navbar_back_and_home = `
+    <a href="javascript:history.back()">Atrás</a>
+    <a href="../index.html">Página Principal</a>
+`;    
 document.getElementById("header").innerHTML = header;
 document.getElementById("footer").innerHTML = footer;
+document.getElementById("navbar_back_and_home").innerHTML = navbar_back_and_home;

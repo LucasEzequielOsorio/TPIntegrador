@@ -2,28 +2,9 @@
 {
     background-color: whitesmoke;
 }
-.navbar
-{
-    margin-top: 2rem;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-.navbar a
-{
-    display: block;
-    margin: 0 1rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    color: black;
-    background-color: lightgray;
-}
 .gift_card_personalization_section
 {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
     width: 100%;
 }
 .gift_card_personalization_dashboard
@@ -117,7 +98,11 @@
 {
     margin-top: 2rem;
     padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0px;
+    background-color: lightgray;
     justify-self: center;
+    cursor: pointer;
 }
 .gift_card_preview_container
 {
@@ -163,4 +148,64 @@
 .gift_card_preview_name
 {
     font-size: 3rem;
+}
+@media screen and (max-width: 768px)
+{
+    .gift_card_personalization_section
+    {     
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .gift_card_preview_container
+    {
+        width: 75vw;
+        position: sticky;
+        top: 2rem;
+    }
+    .gift_card_preview
+    {
+        height: 75vw;
+    }
+    .gift_card_personalization_dashboard
+    {
+        width: 80vw;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1039px)
+{
+    .gift_card_personalization_section
+    {     
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .gift_card_preview_container
+    {
+        width: 60vw;
+        position: sticky;
+        top: 2rem;
+    }
+    .gift_card_preview
+    {
+        height: 60vw;
+    }
+    .gift_card_personalization_dashboard
+    {
+        width: 80vw;
+    }
+}
+@media screen and (min-width: 1040px)
+{
+    .gift_card_personalization_section
+    {     
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+    .gift_card_preview_container
+    {
+        width: 40vw;
+    }
+    .gift_card_personalization_dashboard
+    {
+        width: 40vw;
+    }
 }

@@ -1,0 +1,56 @@
+.payment_section
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.payment_form
+{
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 50%;
+    width: 50%;
+}
+.payment_form h4
+{
+    width: 100%;
+    text-align: center;
+}
+.form_row
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.form_row *
+{
+    
+    width: 50%;
+    text-align: center;
+}
+.form_row input
+{
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+}
+.payment_form button
+{
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid lightgray;
+    align-self: center;
+    cursor: pointer;
+}
+
