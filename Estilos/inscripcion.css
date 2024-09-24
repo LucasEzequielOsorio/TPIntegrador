@@ -1,0 +1,49 @@
+
+.datos h1{
+    font-size: 250%;
+}
+.datos_inscripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   text-align: center;
+}
+.datos{
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    padding: 4% 8%;
+    margin-top:1% ;
+    width: 50%;
+}
+.formularios-singular{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+}
+.formularios-singular input{
+    width: 30%;
+    border-radius: 0.4em;
+    border: 3px solid lightgray;
+
+}
+.Agregar{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Agregar button{
+    margin-left: 1em;
+}
+.inscribirse button{
+    font-size: 100%;
+   width: 20em;
+   height: 5em;
+}
+.inscribirse button:hover{
+  background-color: rgba(155, 230, 133, 0.76);}
+  
