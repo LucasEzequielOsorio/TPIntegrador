@@ -1,0 +1,229 @@
+.contenedorDetalle {
+    margin-top: 2%;
+    display: flex;
+    gap: 5rem;
+    border: lightcoral;
+    padding: 1.25rem; 
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+    width: 50%;
+}
+
+.fotoCurso {
+    margin-top: 1.5rem;
+}
+
+.btnInscripcion{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.625rem 1.25rem; 
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.detallesCurso p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.detallesCurso ul li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tituloContenidos {
+    margin-top: 5rem;
+    font-size: 2rem;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+.contenedorContenidos {
+    width: 100%;
+    max-width: 40rem;
+    margin: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.contenedorUnidad {
+    border-bottom: 1px solid #ccc;
+}
+
+.contenedorTituloCurso {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    background-color: #f0f0f0;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido {
+    display: block; /* Siempre visible */
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.contenedorUnidadClases {
+    list-style-type: none;
+    padding: 0;
+}
+
+.leccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.icono {
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+
+.tituloClases {
+    flex-grow: 1;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.duracion {
+    margin-right: 1rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.completado input[type="radio"] {
+    accent-color: #4CAF50;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+.contenedorDocente {
+    width: 40rem;
+    background-color: #e0e0e0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    margin-top: 5rem;
+}
+
+.contenedorFotoNombre {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 1rem;
+}
+
+.fotoDocente img {
+    width: 4rem;
+}
+
+.calificacionDocente {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-rating h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+
+.estrellasCalificacion img {
+    width: 1rem;
+}
+
+
+.descripcionDocente p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+.contenedorRecomendados {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+
+
+.contenedorTituloCursoRecomendados {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: paleturquoise;
+    border-radius: 2%;
+    font-weight: bold;
+}
+
+
+/* Media query para pantallas pequeñas 480px == 30rem */
+@media (max-width: 30rem) {
+    .contenedorDetalle {
+        flex-direction: column;
+        width: 90%;
+        gap: 2rem;
+    }
+
+    .contenedorContenidos, .contenedorDocente {
+        width: 90%;
+    }
+
+    .fotoCurso {
+        margin-top: 0;
+    }
+
+    .btnInscripcion {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .tituloContenidos {
+        font-size: 1.5rem;
+    }
+
+    .contenedorFotoNombre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .fotoDocente img {
+        width: 3rem;
+    }
+
+    .name-rating h2 {
+        font-size: 1.25rem;
+    }
+
+    .descripcionDocente p {
+        font-size: 1rem;
+    }
+
+    .contenedorRecomendados {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contenedorTituloCursoRecomendados {
+        width: 90%;
+    }
+}
+
+

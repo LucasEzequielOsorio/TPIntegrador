@@ -1,5 +1,5 @@
 const header = `
-    <a href="../index.html" class="logo logo_desktop">
+    <a href="../vistas/inicio.html" class="logo logo_desktop">
         <span class="logo_black">Cours</span><span class="logo_blue">Ed</span>
     </a>
     <a href="../index.html" class="logo logo_tiny">
@@ -8,11 +8,16 @@ const header = `
     <form class="search_bar">
         <input list="courses" name="course" id="course">
             <datalist id="courses">
-                <option value="Curso Presencial 1">
-                <option value="Curso virtual 1">
-                <option value="Curso presencial 2">
-                <option value="Curso virtual 2">
-                <option value="Curso presencial 3">
+                <option value="Webserver Administration">
+                <option value="Seguridad Informatica para todos">
+                <option value="Direccionamiento IP y Subredes Cisco">
+                <option value="Seguridad Informatica desde cero">
+                <option value="Ciberseguridad Todo en Uno">
+                <option value="Seguridad Linux">
+                <option value="Desarrollo de software seguro">
+                <option value="Desarrollo de software seguro">
+                <option value="Excel Completo">
+                <option value="Máster en SQL">
             </datalist>
         <button type="submit">Buscar</button>
     </form>
@@ -28,7 +33,13 @@ const footer = `
         </ul>
     </div>
     <div class="footer_item">
-        <h4>El grupo</h4><p>lorem ipsum</p>
+        <h4>Menú</h4>
+        <ul>
+            <li><a href="../vistas/inicio.html">Home</a></li>
+            <li><a href="../vistas/calendario.html">Próximos cursos</a></li>
+            <li><a href="../vistas/gift-card.html">Tarjetas de regalo</a></li>
+            <li><a href="../vistas/contacto.html">Contacto</a></li>
+        </ul>
     </div>
     <div class="footer_item">
         <h4>Seguinos</h4>
@@ -39,10 +50,26 @@ const footer = `
             <li><a href="https://facebook.com">Facebook</a></li>
         </ul>
     </div>`;
+
+const navbar_home = `
+        <a href="./calendario.html">Próximos cursos</a>
+        <a href="./gift-card.html">¡Regalá CoursEd!</a>
+        <a href="./contacto.html">Contacto</a>
+        <a href="../index.html">Cerrar Sesión</a>`;
+
 const navbar_back_and_home = `
     <a href="javascript:history.back()">Atrás</a>
-    <a href="../index.html">Página Principal</a>
-`;    
-document.getElementById("header").innerHTML = header;
+    <a href="./inicio.html">Página Principal</a>`;
+if(document.getElementById("header") != null)
+{    
+    document.getElementById("header").innerHTML = header;
+}    
+if(document.getElementById("navbar_home") != null)
+{
+    document.getElementById("navbar_home").innerHTML = navbar_home;
+}
+if(document.getElementById("navbar_back_and_home"))
+{
+    document.getElementById("navbar_back_and_home").innerHTML = navbar_back_and_home;
+}
 document.getElementById("footer").innerHTML = footer;
-document.getElementById("navbar_back_and_home").innerHTML = navbar_back_and_home;

@@ -1,0 +1,110 @@
+.body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor {
+    width: 80%;
+    display: flex;
+    flex-direction: row; 
+    gap: 8rem; 
+    justify-content: center;
+}
+
+.contenedorDatos {
+    
+    width: 40%;
+    border: lightcoral;
+    padding: 1.25rem; 
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+}
+
+.contenedorContactoMiEmpresa {
+    
+    border: lightcoral;
+    padding: 1.25rem; 
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+}
+
+.contenedorInput {
+    margin-bottom: 1.25rem; 
+}
+
+.inputDatos {
+    width: 100%; 
+    padding: 0.75rem; 
+    border: 0.0625rem solid #ccc; 
+    border-radius: 0.25rem; 
+    box-sizing: border-box;
+    font-size: 1rem; 
+}
+
+textarea.inputDatos {
+    height: 10rem; 
+    resize: none;
+    font-size: 1rem; 
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.625rem 1.25rem; 
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.contenedorMapa {
+    width: 50%;
+    margin: 2.5rem 0; 
+    text-align: center;
+}
+
+iframe {
+    width: 100%; 
+    max-width: 100%; 
+    height: 28.125rem; 
+    border: 0;
+}
+
+/* Media query para pantallas de hasta 480px */
+@media (max-width: 30rem) { /* 30rem es equivalente a 480px */ 
+    .contenedor {
+        width: 100%;
+        flex-direction: column; 
+        gap: 2rem; 
+    }
+
+    .contenedorDatos,
+    .contenedorContactoMiEmpresa {
+        width: 90%; 
+        padding: 1rem; 
+    }
+
+    .inputDatos {
+        padding: 0.5rem; 
+        font-size: 0.875rem; 
+    }
+
+    textarea.inputDatos {
+        height: 8rem; 
+    }
+
+    button {
+        padding: 0.5rem 1rem; 
+        font-size: 0.875rem; 
+    }
+
+    .contenedorMapa {
+        width: 100%; 
+        margin: 1.5rem 0; 
+    }
+
+    iframe {
+        height: 18.75rem; 
+    }
+}

@@ -135,6 +135,7 @@ body *
 .footer_item ul li
 {
     margin-left: 0;
+    margin-bottom: 1rem;
 }
 .footer_item ul li a
 {
@@ -153,6 +154,11 @@ body *
     #header
     {
         height: 5rem;
+    }
+
+    .footer_item ul li
+    {
+        margin-bottom: 2rem;
     }
 }
 @media screen and (min-width: 481px) and (max-width: 768px){

@@ -1,0 +1,236 @@
+#navbar_home
+{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#navbar_home a
+{
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carrousel{
+    width: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+}
+
+.img{
+    border-radius: 2% 2% 0% 0%;
+}
+
+.contenedorCurso{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: paleturquoise;
+    border-radius: 2%;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.tituloCurso{
+    /*background-color: yellow;*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.contenedorPasos{
+    background-color: rgba(186, 238, 238, 0.719);
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: 2em;
+    border-radius: 2%;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.pasos{
+    align-items: center;
+    text-align: center;
+    background-color: paleturquoise;
+    border-radius: 2%;
+    padding: 0.1%;
+    width: 20%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.tituloCursosDestacados{
+    font-size: 2.5rem;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+.contenedorCursosDestacados{
+    width: 90%;
+}
+
+.contenedorDestacadosLineaUno{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.contenedorCurso{
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.contenedorImagenHora{
+    /*background-color: orange;*/
+    display: flex;
+    flex-flow: column;
+}
+
+.horaCursoLinea1{
+    position: relative;
+    bottom: 1rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.contenedorTituloCurso{
+    /*background-color: violet;*/
+    width: 100%;  
+}
+
+.contenedorCurso p {
+    margin: 0;
+}
+
+.contenedorDestacadosLineaDos{
+    padding-top: 3%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.horaCursoLinea2{
+    position: relative;
+    bottom: 1rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.contenedorDetallesComprar{
+    padding: 1rem;
+}
+
+.contenedorTarjetas{
+    margin-top: 10%;
+}
+
+.imagenTarjeta{
+    border: 1px solid lightgrey;
+    margin-left: 1rem;
+}
+
+
+.btnDetallesCompra{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.625rem 1.25rem; 
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+
+/* ------------------------------------------------------------------------------- */
+
+
+
+
+/* Media Query para pantallas de hasta 480px */
+@media (max-width: 30rem) { /* 30rem es equivalente a 480px */
+
+    .carrousel {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .contenedorCurso {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    .contenedorPasos {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .pasos {
+        width: 80%;
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+
+    .tituloCursosDestacados {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .contenedorDestacadosLineaUno,
+    .contenedorDestacadosLineaDos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedorCurso {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .horaCursoLinea1,
+    .horaCursoLinea2 {
+        font-size: 0.875rem;
+    }
+
+    .contenedorDetallesComprar {
+        padding: 0.5rem;
+    }
+
+    .btnDetallesCompra {
+        font-size: 0.875rem;
+    }
+
+    .contenedorTarjetas {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    .imagenTarjeta {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        width: 80%;
+    }
+}

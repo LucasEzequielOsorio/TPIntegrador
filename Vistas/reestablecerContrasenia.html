@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" href="./imagenes/iconoPestania.ico">
+    <link rel="shortcut icon" href="../imagenes/iconoPestania.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Estilos/index.css">
-    <title>Login - CoursEd</title>
+    <link rel="stylesheet" href="../Estilos/index.css">
+    <title>Reestablecer Contrasenia - CoursEd</title>
 </head>
 <body>
-
+    
     <header class="header">
 
-        <span href="#" class="logo logo_desktop">
+        <a href="../index.html" class="logo logo_desktop">
             <span class="logo_black">Cours</span><span class="logo_blue">Ed</span>
-        </span>
+        </a>
 
     </header>
-    
-    <form class="formulario" action="./Vistas/inicio.html">
 
-        <h1>Login</h1>
+    <form class="formulario" action="../index.html">
+
+        <h1>Reestablecer Contraseña</h1>
         
         <div class="contenedor">
 
@@ -33,15 +33,19 @@
                 <input type="password" required placeholder="Contraseña">
             </div>
 
-            <input type="submit" value="Ingresar" class="button">
+            <div class="inputContenedor">
+                <img src="../imagenes/keyLogo.png" alt="Contraseña">
+                <input type="password" required placeholder="Repita la Contraseña">
+            </div>
+
+            <input type="submit" value="Reestablecer Contraseña" class="button">
             
-            
-            <p>¿No tienes cuenta? <a class="link" href="./Vistas/registroSesion.html">Registrarse</a></p>
-            <p>¿Olvidaste tu contraseña? <a class="link" href="./Vistas/reestablecerContrasenia.html">Reestablecer Contraseña</a></p>
+            <p>¿Ya tienes una cuenta? <a class="link" href="../index.html">Iniciar Sesión</a></p>
 
         </div>
 
     </form>
 
 </body>
+
 </html>

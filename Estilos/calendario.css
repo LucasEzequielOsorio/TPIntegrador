@@ -77,29 +77,34 @@
 .calendar_item_courses_container
 {
     display: flex;
+    width: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.calendar_item_virtual_course
+.calendar_item_course
 {
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
     padding: 0.5rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
     background-color: blue;
-    text-decoration: none;
     color: white;
 }
-.calendar_item_presential_course
+
+.calendar_item_course:hover
 {
-    padding: 0.5rem;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    background-color: red;
-    text-decoration: none;
-    color: white;
+    width: auto;
+    white-space: inherit;
+    overflow: visible;
+    text-overflow: inherit;
 }
+
 @media screen and (max-width: 480px) {
     .calendar_container
     {
@@ -111,12 +116,35 @@
     }
     .calendar_item_courses_container
     {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
+        width: 100%;
     }
-    .calendar_item_courses_container *
+    .calendar_item_course
     {
         padding: 0.25rem;
         border-radius: 0.5rem;
         margin-bottom: 0.5rem;
+        text-decoration: none;
+        width: 100%;
+        white-space: inherit;
+        overflow: scroll;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .calendar_item_courses_container
+    {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+    .calendar_item_course
+    {
+        padding: 0.25rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+        width: 100%;
+        white-space: inherit;
+        overflow: scroll;
     }
 }
