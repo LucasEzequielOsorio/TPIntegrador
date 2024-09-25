@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
 }
 #navbar_home a
 {
@@ -15,6 +16,9 @@
     border: 1px solid lightgray;
     margin-left: 1rem;
     margin-right: 1rem;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .body
 {
@@ -169,6 +173,15 @@ button:hover {
 /* Media Query para pantallas de hasta 480px */
 @media (max-width: 30rem) { /* 30rem es equivalente a 480px */
 
+    #navbar_home
+    {
+        justify-content: flex-start;
+        font-size: 0.5rem;
+    }
+    #navbar_home a
+    {
+        padding: 0.5rem
+    }
     .carrousel {
         flex-direction: column;
         padding: 1rem;

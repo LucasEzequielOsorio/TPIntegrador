@@ -160,7 +160,7 @@
     .gift_card_preview_container
     {
         width: 100vw;
-        background-color: whitesmoke;
+        background-color: white;
         position: sticky;
         top: 2rem;
     }
@@ -185,7 +185,7 @@
     {
         width: 100%;
         position: sticky;
-        background-color: whitesmoke;
+        background-color: white;
         top: 2rem;
     }
     .gift_card_preview
