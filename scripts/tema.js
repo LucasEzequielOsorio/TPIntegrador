@@ -5,7 +5,7 @@ const header = `
     <a href="../index.html" class="logo logo_tiny">
         <span class="logo_black">C:</span><span class="logo_blue">Ed</span>
     </a>
-    <form class="search_bar">
+    <form class="search_bar" action="../vistas/inicio.html">
         <input list="courses" name="course" id="course">
             <datalist id="courses">
                 <option value="Webserver Administration">
