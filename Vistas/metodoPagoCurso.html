@@ -30,21 +30,26 @@
             </div>
 
             <div class="formularioPagoFila">
-                <input type="radio" name="tipoTarjeta">
-                <input type="radio" name="tipoTarjeta">
+                <input type="radio" required name="tipoTarjeta">
+                <input type="radio" required name="tipoTarjeta">
             </div>
 
             <div class="formularioPagoFila">
-                <label for="numeroTarjeta" class="campoInput">Número de tarjeta</label><input type="number" name="numeroTarjeta" id="numeroTarjeta">
+                <label for="numeroTarjeta" class="campoInput">Número de tarjeta</label>
+                <input type="number" required name="numeroTarjeta" id="numeroTarjeta">
             </div>
 
             <div class="formularioPagoFila">
-                <label for="name" class="campoInput">Nombre (como figura en tarjeta)</label><input type="text" name="name" id="name">
+                <label for="name" class="campoInput">Nombre (como figura en tarjeta)</label>
+                <input type="text" required name="name" id="name">
             </div>
 
             <div class="formularioPagoFila">
-                <label for="vencimientoMes" class="campoInput">Vencimiento</label><input type="month" name="" id="vencimientoMes">
-                <label for="codigoSeguridad" class="campoInput">Código de seguridad</label><input type="number" name="" id="codigoSeguridad">
+                <label for="vencimientoMes" class="campoInput">Vencimiento</label>
+                <input type="month" required name="" id="vencimientoMes">
+
+                <label for="codigoSeguridad" class="campoInput">Código de seguridad</label>
+                <input type="number" required name="" id="codigoSeguridad">
             </div>
 
             <button type="submit">Confirmar</button>
