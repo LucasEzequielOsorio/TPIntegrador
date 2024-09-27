@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagenes/iconoPestania.ico">
+    <link rel="stylesheet" href="../estilos/tema.css">
+    <link rel="stylesheet" href="../Estilos/carrito.css">
+    <title>Carrito - CoursEd</title>
+
+</head>
+<body class="body">
+    <header id="header"></header>
+    <nav id="navbar_back_and_home"></nav>
+
+    <section class="tituloCarrito">
+        <h1>Carrito de compras</h1>
+    </section>
+
+    <section class="contenedorCarritoGeneral">
+        <div class="contenedorCarrito">
+
+            <!-- Encabezado de los productos -->
+            <div class="subtituloCarrito">
+                <div class="datoCarrito">Producto</div>
+                <div class="datoCarrito">Precio</div>
+                <div class="datoCarrito">Cantidad</div>
+                <div class="datoCarrito">Subtotal</div>
+                <div class="datoCarrito"></div>
+            </div>
+
+            <!-- Lista de productos -->
+            <div class="filaCarrito">
+                <div class="datoCarrito">Curso de JavaScript</div>
+                <div class="datoCarrito">U$D 20</div>
+                <div class="datoCarrito">
+                    <input type="number" value="1" min="1">
+                </div>
+                <div class="datoCarrito">U$D 20</div>
+                <div class="datoCarrito">
+                    <button class="btnBorrarFila">🗑️</button>
+                </div>
+            </div>
+
+            <div class="filaCarrito">
+                <div class="datoCarrito">Python para principiantes</div>
+                <div class="datoCarrito">U$D 20</div>
+                <div class="datoCarrito">
+                    <input type="number" value="1" min="1">
+                </div>
+                <div class="datoCarrito">U$D 20</div>
+                <div class="datoCarrito">
+                    <button class="btnBorrarFila">🗑️</button>
+                </div>
+            </div>
+
+            <div class="filaCarrito">
+                <div class="datoCarrito">FrontEnd Intensivo</div>
+                <div class="datoCarrito">U$D 60</div>
+                <div class="datoCarrito">
+                    <input type="number" value="1" min="1">
+                </div>
+                <div class="datoCarrito">U$D 60</div>
+                <div class="datoCarrito">
+                    <button class="btnBorrarFila">🗑️</button>
+                </div>
+            </div>
+
+            <div class="filaCarrito">
+                <div class="datoCarrito">MySQL para principiantes</div>
+                <div class="datoCarrito">U$D 40</div>
+                <div class="datoCarrito">
+                    <input type="number" value="1" min="1">
+                </div>
+                <div class="datoCarrito">U$D 40</div>
+                <div class="datoCarrito">
+                    <button class="btnBorrarFila">🗑️</button>
+                </div>
+            </div>
+
+            <!-- Acciones del carrito -->
+            <div class="btnsAccionCarrito">
+                <a href="../Vistas/inicio.html"> <button class="btnContinuarComprando">SEGUIR COMPRANDO</button> </a>
+                <div class="totalCompraCarrito">
+                    <span>Total:</span>
+                    <span>U$D 140</span>
+                </div>
+                <a href="../Vistas/metodoPagoCurso.html"> <button class="btnContinuarPago">CONTINUAR PAGO</button> </a>
+            </div>
+
+        </div>
+        
+    </section>
+
+
+    <footer id="footer"></footer>
+</body>
+<script src="../scripts/tema.js"></script>
+
+</html>
