@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagar gift-card - CoursEd</title>
+    <link rel="shortcut icon" href="../imagenes/iconoPestania.ico">
+    <link rel="stylesheet" href="../Estilos/tema.css">
+    <link rel="stylesheet" href="../Estilos/metodoPagoCurso.css">
+</head>
+<body>
+
+    <header id="header"></header>
+
+    <nav id="navbar_back_and_home"></nav>
+
+    <section class="contenedorPago">
+
+        <form action="pago-confirmado.html" class="formularioPago">
+
+            <h4>Información de Pago</h4>
+
+            <div class="formularioPagoFila">
+                <label for="tipoTarjeta">Tipo de tarjeta:</label>
+            </div>
+
+            <div class="formularioPagoFila">
+                <label for="credito">Crédito</label>
+                <label for="debito">Débito</label>
+            </div>
+
+            <div class="formularioPagoFila">
+                <input type="radio" name="tipoTarjeta">
+                <input type="radio" name="tipoTarjeta">
+            </div>
+
+            <div class="formularioPagoFila">
+                <label for="numeroTarjeta" class="campoInput">Número de tarjeta</label><input type="number" name="numeroTarjeta" id="numeroTarjeta">
+            </div>
+
+            <div class="formularioPagoFila">
+                <label for="name" class="campoInput">Nombre (como figura en tarjeta)</label><input type="text" name="name" id="name">
+            </div>
+
+            <div class="formularioPagoFila">
+                <label for="vencimientoMes" class="campoInput">Vencimiento</label><input type="month" name="" id="vencimientoMes">
+                <label for="codigoSeguridad" class="campoInput">Código de seguridad</label><input type="number" name="" id="codigoSeguridad">
+            </div>
+
+            <button type="submit">Confirmar</button>
+
+        </form>
+
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="../scripts/tema.js"></script>
+</body>
+</html>
