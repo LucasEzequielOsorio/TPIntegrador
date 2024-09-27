@@ -47,3 +47,10 @@
 .inscribirse button:hover{
   background-color: rgba(155, 230, 133, 0.76);}
   
+.botonEliminar {
+    text-decoration: none;
+    border-radius: 0.4em;
+    border: 3px solid lightgray;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}

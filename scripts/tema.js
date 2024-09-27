@@ -21,7 +21,7 @@ const header = `
             </datalist>
         <button type="submit">Buscar</button>
     </form>
-    <a href="#" class="cart_logo"><span>0</span></a>`;
+    <a href="../Vistas/carrito.html" class="cart_logo"><span>0</span></a>`;
 const footer = `
     <div class="footer_item">
         <h4>El grupo</h4>
