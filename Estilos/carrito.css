@@ -13,7 +13,6 @@
     justify-content: center;
 }
 
-/* Encabezado del carrito */
 .subtituloCarrito {
     display: flex;
     justify-content: space-between;
