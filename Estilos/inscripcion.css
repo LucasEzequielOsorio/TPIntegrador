@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-   text-align: center;
+    text-align: center;
 }
 .datos{
     background-color: whitesmoke;
@@ -31,7 +31,6 @@
 
 }
 .Agregar{
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -40,9 +39,13 @@
     margin-left: 1em;
 }
 .button{
-    font-size: 100%;
-   width: 20em;
-   height: 5em;
+    background-color: #2164d6;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
 }
 .inscribirse button:hover{
   background-color: rgba(155, 230, 133, 0.76);}
