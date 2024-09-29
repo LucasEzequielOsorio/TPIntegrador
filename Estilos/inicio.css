@@ -107,6 +107,7 @@
     /*background-color: orange;*/
     display: flex;
     flex-flow: column;
+    width: 70%;
 }
 
 .horaCursoLinea1{

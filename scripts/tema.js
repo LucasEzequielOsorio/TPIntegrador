@@ -2,7 +2,7 @@ const header = `
     <a href="../vistas/inicio.html" class="logo logo_desktop">
         <span class="logo_black">Cours</span><span class="logo_blue">Ed</span>
     </a>
-    <a href="../index.html" class="logo logo_tiny">
+    <a href="../vistas/inicio.html" class="logo logo_tiny">
         <span class="logo_black">C:</span><span class="logo_blue">Ed</span>
     </a>
     <form class="search_bar" action="../vistas/inicio.html">
@@ -24,7 +24,7 @@ const header = `
     <a href="../Vistas/carrito.html" class="cart_logo"><span>0</span></a>`;
 const footer = `
     <div class="footer_item">
-        <h4>El grupo</h4>
+        <h4>EL GRUPO</h4>
         <ul>
             <li>Lucas Osorio, DNI 45.753.437</li>
             <li>Federico García, DNI 38.511.888</li>
@@ -33,8 +33,8 @@ const footer = `
         </ul>
     </div>
     <div class="footer_item">
-        <h4>Menú</h4>
-        <ul>
+        <h4>MENÚ</h4>
+        <ul class="contenedorListaFooter">
             <li><a href="../vistas/inicio.html">Home</a></li>
             <li><a href="../vistas/calendario.html">Próximos cursos</a></li>
             <li><a href="../vistas/gift-card.html">Tarjetas de regalo</a></li>
@@ -42,8 +42,8 @@ const footer = `
         </ul>
     </div>
     <div class="footer_item">
-        <h4>Seguinos</h4>
-        <ul>
+        <h4>NUESTRAS REDES</h4>
+        <ul class="contenedorListaFooter">
             <li><a href="https://instagram.com">Instagram</a></li>
             <li><a href="https://x.com">X/Twitter</a></li>
             <li><a href="https://youtube.com">YouTube</a></li>

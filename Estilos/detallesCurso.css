@@ -47,6 +47,15 @@ button:hover {
     font-size: 2rem;
 }
 
+.detallesCurso h2 {
+    text-align: center;
+}
+
+.detallesCurso p {
+    text-align: justify;
+}
+
+
 /* ----------------------------------------------------------------------------- */
 
 .contenedorContenidos {
@@ -160,6 +169,7 @@ button:hover {
 .descripcionDocente p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.2rem;
+    text-align: justify;
 }
 
 /* ------------------------------------------------------------------------------------------- */
