@@ -36,7 +36,7 @@
 
             <div class="formularioPagoFila">
                 <label for="numeroTarjeta" class="campoInput">Número de tarjeta</label>
-                <input type="number" required name="numeroTarjeta" id="numeroTarjeta">
+                <input type="number" required name="numeroTarjeta" id="numeroTarjeta" min="1">
             </div>
 
             <div class="formularioPagoFila">
@@ -46,10 +46,10 @@
 
             <div class="formularioPagoFila">
                 <label for="vencimientoMes" class="campoInput">Vencimiento</label>
-                <input type="month" required name="" id="vencimientoMes">
+                <input type="month" required name="" id="vencimientoMes" min="1900">
 
                 <label for="codigoSeguridad" class="campoInput">Código de seguridad</label>
-                <input type="number" required name="" id="codigoSeguridad">
+                <input type="number" required name="" id="codigoSeguridad" min="1">
             </div>
 
             <button type="submit">REALIZAR PAGO</button>
