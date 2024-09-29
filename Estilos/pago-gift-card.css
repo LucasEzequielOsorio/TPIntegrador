@@ -16,7 +16,6 @@
     justify-content: space-between;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 50%;
     width: 50%;
 }
 .payment_form h4
@@ -31,12 +30,18 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    margin-bottom: 0.5rem;
 }
 .form_row *
 {
     
     width: 50%;
     text-align: center;
+}
+.form_last_row_half
+{
+    display: flex;
+    justify-content: space-around;
 }
 .form_row input
 {
@@ -52,5 +57,21 @@
     border: 2px solid lightgray;
     align-self: center;
     cursor: pointer;
+}
+.payment_form button:hover
+{
+    background-color: lightgray;
+}
+@media screen and (max-width: 480px) {
+    .form_row *
+    {
+        font-size: 0.6rem;
+    }
+}
+@media screen and (max-width: 767px){
+    .payment_form
+    {
+        width: 80%;
+    }
 }
 
