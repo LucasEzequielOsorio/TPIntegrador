@@ -71,21 +71,14 @@ button:hover {
     
 }
 
-.contenedorUnidad {
-    border-bottom: 1px solid #ccc;
-}
-
 .contenedorTituloCurso {
     width: 100%;
     padding: 1rem;
     text-align: left;
     background-color: #f0f0f0;
-    border: none;
+    border: 1px solid #ccc;
     font-size: 1rem;
     font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .contenido {
