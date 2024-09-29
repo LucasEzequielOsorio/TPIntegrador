@@ -14,29 +14,29 @@
     <section class="payment_section">
         <form action="pago-confirmado.html" class="payment_form">
             <div class="form_row">
-                <label for="email" class="form_label">Correo electrónico destinatario</label><input type="email" name="email" id="email">
+                <label for="email" class="form_label">Correo electrónico destinatario</label><input type="email" name="email" id="email" required>
             </div>
             <h4>Pago</h4>
             <div class="form_row">
                 <label for="card-type" class="full_row_label">Tipo de tarjeta:</label>
             </div>
             <div class="form_row">
-                <label for="credit" class="form_radio_label form_label">Crédito</label>
+                <label for="credit" class="form_radio_label form_label>Crédito</label>
                 <label for="debit" class="form_radio_label form_label">Débito</label>
             </div>
             <div class="form_row">
-                <input type="radio" name="card-type" id="credit" class="form_radio">
+                <input type="radio" name="card-type" id="credit" class="form_radio" checked>
                 <input type="radio" name="card-type" id="debit" class="form_radio">
             </div>
             <div class="form_row">
-                <label for="card_number" class="form_label">Número de tarjeta</label><input type="number" name="card_number" id="card_number">
+                <label for="card_number" class="form_label">Número de tarjeta</label><input type="number" name="card_number" id="card_number" required>
             </div>
             <div class="form_row">
-                <label for="name" class="form_label">Nombre (como figura en tarjeta)</label><input type="text" name="name" id="name">
+                <label for="name" class="form_label">Nombre (como figura en tarjeta)</label><input type="text" name="name" id="name" required>
             </div>
             <div class="form_row">
-                <label for="expire_month" class="form_label">Vencimiento</label><input type="month" name="" id="expire_month">
-                <label for="security_code" class="form_label">Código de seguridad</label><input type="number" name="" id="security_code">
+                <label for="expire_month" class="form_label">Vencimiento</label><input type="month" name="" id="expire_month" required>
+                <label for="security_code" class="form_label">Código de seguridad</label><input type="number" name="" id="security_code" required>
             </div>
             <button type="submit">Confirmar</button>
         </form>

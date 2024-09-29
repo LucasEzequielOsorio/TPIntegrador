@@ -59,11 +59,16 @@ body *
 }
 .search_bar button
 {
+    color: black;
     background-color: whitesmoke;
     border: 1px solid lightgray;
     padding: 0 0.5rem 0 0.5rem;
     border-radius: 1rem;
     margin-left: 0.5rem;
+}
+.search_bar button:hover
+{
+    background-color: lightgray;
 }
 .cart_logo
 {
@@ -89,8 +94,9 @@ body *
 }
 #navbar_back_and_home
 {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
+    align-items: center;
     width: 100%;
     justify-content: space-between;
 }
@@ -104,8 +110,11 @@ body *
     color: black;
     background-color: whitesmoke;
     border: 1px solid lightgray;
-    width: 8.2%;
     text-align: center;
+}
+#navbar_back_and_home a:hover
+{
+    background-color: lightgray;
 }
 #footer
 {   
@@ -142,7 +151,10 @@ body *
     margin-bottom: .5rem;
     width: 80%;
 }
-
+.footer_item ul li a:hover
+{
+    text-decoration: underline;
+}
 .footer_item *
 {   
     text-decoration: none;

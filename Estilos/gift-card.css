@@ -97,12 +97,16 @@
 .submit_button
 {
     margin-top: 2rem;
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 0.5rem;
-    border: 0px;
-    background-color: lightgray;
+    border: 1px solid lightgray;
+    background-color: whitesmoke;
     justify-self: center;
     cursor: pointer;
+}
+.submit_button:hover
+{
+    background-color: lightgray;
 }
 .gift_card_preview_container
 {
