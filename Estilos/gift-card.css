@@ -154,6 +154,21 @@
 {
     font-size: 3rem;
 }
+@media screen and (max-width: 480px)
+{
+    .gift_card_preview_amount
+    {
+        font-size: 0.5rem;
+    }
+    .gift_card_preview_text
+    {
+        font-size: 1rem;
+    }
+    .gift_card_preview_name
+    {
+        font-size: 1.5rem;
+    }
+}
 @media screen and (max-width: 768px)
 {
     .gift_card_personalization_section
@@ -165,7 +180,7 @@
     {
         width: 100vw;
         background-color: white;
-      <!--  position: sticky; -->
+        position: sticky;
         top: 2rem;
     }
     .gift_card_preview
@@ -188,7 +203,7 @@
     .gift_card_preview_container
     {
         width: 100%;
-      <!--  position: sticky; -->
+        position: sticky;
         background-color: white;
         top: 2rem;
     }
@@ -212,6 +227,11 @@
     .gift_card_preview_container
     {
         width: 40vw;
+    }
+    .gift_card_preview
+    {
+        width: 30vw;
+        height: 30vw;
     }
     .gift_card_personalization_dashboard
     {
