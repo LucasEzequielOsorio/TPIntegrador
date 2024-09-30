@@ -187,6 +187,18 @@ button:hover {
 
 /* Media query para pantallas pequeñas 480px == 30rem */
 @media (max-width: 30rem) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        padding: 0.5rem;
+        width: 50%;
+        margin: 0.5rem 0;
+    }
+
     .contenedorDetalle {
         flex-direction: column;
         width: 90%;
