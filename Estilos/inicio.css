@@ -177,6 +177,110 @@ button:hover {
 
 
 /* ------------------------------------------------------------------------------- */
+/* Media Query para pantallas entre 480px y 768px */
+@media (min-width: 30rem) and (max-width: 48rem) { /* 480px = 30rem y 768px = 48rem */
+    .carrousel {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .contenedorCurso {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+    
+    .contenedorImagenHora {
+        width: 100%;
+    }
+    
+    .pasos {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    .contenedorPasos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedorDestacadosLineaUno, .contenedorDestacadosLineaDos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar_home {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    #navbar_home a {
+        width: 30%;
+        margin: 0.5rem 0;
+    }
+
+    .tituloCursosDestacados {
+        font-size: 2rem;
+    }
+
+    .contenedorTarjetas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .imagenTarjeta {
+        margin: 0.5rem;
+        width: auto;
+    }
+}
+
+/* Media Query para resoluciones de tablets (768px a 1024px) */
+@media (min-width: 48rem) and (max-width: 64rem) { /* 768px = 48rem y 1024px = 64rem */
+    .carrousel {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .contenedorCurso {
+        width: 45%;
+        margin-bottom: 1rem;
+    }
+
+    .contenedorPasos {
+        width: 50%;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pasos {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .contenedorDestacadosLineaUno, .contenedorDestacadosLineaDos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #navbar_home a {
+        width: 20%;
+    }
+
+    .contenedorTarjetas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .imagenTarjeta {
+        margin: 0.5rem;
+        width: 100px;
+    }
+}
+
 
 
 
@@ -191,7 +295,7 @@ button:hover {
 
     #navbar_home a {
         padding: 0.5rem;
-        width: 80%;
+        width: 50%;
         margin: 0.5rem 0;
     }
     .carrousel {
