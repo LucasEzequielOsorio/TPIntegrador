@@ -102,3 +102,178 @@
     cursor: pointer;
     font-size: 1rem;
 }
+
+
+/* ----------------------------------------------------------------------- */
+
+/* Media Query para resoluciones entre 1025px y 1080px (64.0625rem a 67.5rem) */
+@media (min-width: 64.0625rem) and (max-width: 67.5rem) {
+    .contenedorCarrito {
+        width: 60%;
+    }
+
+    .datoCarrito,
+    .nombreCurso {
+        width: 18%;
+        font-size: 1rem;
+    }
+
+    .filaCarrito input {
+        width: 3.75rem;
+    }
+
+    .btnContinuarComprando,
+    .btnContinuarPago {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .totalCompraCarrito {
+        font-size: 1.2rem;
+    }
+
+    .totalCompraCarrito span {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/* Media Query para resoluciones menores a 768px (48rem) */
+@media (max-width: 48rem) {
+    .contenedorCarrito {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.5rem;
+    }
+
+    .subtituloCarrito {
+        display: contents;
+    }
+
+    .datoCarrito {
+        font-weight: bold;
+        text-align: center;
+        padding: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .filaCarrito {
+        display: contents; 
+        align-items: center;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .nombreCurso {
+        grid-column: 1;
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+    }
+
+    .filaCarrito span {
+        display: block;
+        text-align: center;
+    }
+
+    .filaCarrito input {
+        width: 80%;
+        padding: 0.4rem;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .btnBorrarFila {
+        display: block;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        padding: 0.25rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    
+    .btnsAccionCarrito {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+
+    .btnContinuarComprando,
+    .btnContinuarPago {
+        width: 80%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .totalCompraCarrito {
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+        align-items: center;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+
+}
+
+
+/* Media Query para resoluciones menores a 480px (hasta 30rem) */
+@media (max-width: 30rem) {
+    .contenedorCarrito {
+        width: 95%;
+    }
+
+    .subtituloCarrito,
+    .filaCarrito {
+        flex-direction: column;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .datoCarrito,
+    .nombreCurso {
+        width: 100%;
+        font-size: 0.8rem;
+        margin: 0.25rem 0;
+    }
+
+    .filaCarrito input {
+        width: 1rem;
+        padding: 0.25rem;
+    }
+
+    .btnsAccionCarrito {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+
+    .btnContinuarComprando,
+    .btnContinuarPago {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .totalCompraCarrito {
+        flex-flow: row wrap;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .totalCompraCarrito span {
+        margin: 0.25rem 0;
+    }
+}
