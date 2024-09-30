@@ -179,114 +179,6 @@ button:hover {
 
 
 /* ------------------------------------------------------------------------------- */
-/* Media Query para pantallas entre 480px y 768px */
-@media (min-width: 30rem) and (max-width: 48rem) { /* 480px = 30rem y 768px = 48rem */
-    .carrousel {
-        flex-direction: column;
-        padding: 1rem;
-    }
-    
-    .contenedorCurso {
-        width: 80%;
-        margin-bottom: 1rem;
-    }
-    
-    .contenedorImagenHora {
-        width: 100%;
-    }
-    
-    .pasos {
-        width: 80%;
-        margin-bottom: 1rem;
-    }
-
-    .contenedorPasos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contenedorDestacadosLineaUno, .contenedorDestacadosLineaDos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #navbar_home {
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    #navbar_home a {
-        width: 30%;
-        margin: 0.5rem 0;
-    }
-
-    .tituloCursosDestacados {
-        font-size: 2rem;
-    }
-
-    .contenedorTarjetas {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .imagenTarjeta {
-        margin: 0.5rem;
-        width: auto;
-    }
-}
-
-/* Media Query para resoluciones de tablets (768px a 1024px) */
-@media (min-width: 48rem) and (max-width: 64rem) { /* 768px = 48rem y 1024px = 64rem */
-    .carrousel {
-        flex-wrap: wrap;
-        padding: 1rem;
-    }
-
-    .contenedorCurso {
-        width: 45%;
-        margin-bottom: 1rem;
-    }
-
-    .contenedorPasos {
-        width: 50%;
-        padding: 1rem;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .pasos {
-        width: 90%;
-        margin-bottom: 1rem;
-    }
-
-    .contenedorDestacadosLineaUno, .contenedorDestacadosLineaDos {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #navbar_home a {
-        width: 20%;
-    }
-
-    .contenedorTarjetas {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .imagenTarjeta {
-        margin: 0.5rem;
-        width: 100px;
-    }
-}
-
-
-
-
-
 /* Media Query para pantallas de hasta 480px */
 @media (max-width: 30rem) { /* 30rem es equivalente a 480px */
 
@@ -363,5 +255,210 @@ button:hover {
         margin-left: 0;
         margin-bottom: 1rem;
         width: 80%;
+    }
+}
+
+
+
+
+/* Media Query para pantallas entre 480px y 768px */
+@media (min-width: 30rem) and (max-width: 48rem) { /* 480px = 30rem y 768px = 48rem */
+    .carrousel {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .contenedorCurso {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+    
+    .contenedorImagenHora {
+        width: 100%;
+    }
+    
+    .pasos {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    .contenedorPasos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedorDestacadosLineaUno, .contenedorDestacadosLineaDos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar_home {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    #navbar_home a {
+        width: 30%;
+        margin: 0.5rem 0;
+    }
+
+    .tituloCursosDestacados {
+        font-size: 2rem;
+    }
+
+    .contenedorTarjetas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .imagenTarjeta {
+        margin: 0.5rem;
+        width: auto;
+    }
+}
+
+/* Media Query para resoluciones de tablets (768px a 1024px) */
+@media (min-width: 48rem) and (max-width: 64rem) { /* 768px = 48rem y 1024px = 64rem */
+    #navbar_home {
+        width: 80%;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    #navbar_home a {
+        width: 30%;
+        margin: 0.5rem 0;
+    }
+    .carrousel {
+        flex-wrap: wrap;
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .contenedorCurso {
+        width: 45%;
+        margin-bottom: 1rem;
+    }
+
+    .contenedorPasos {
+        width: 50%;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pasos {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .contenedorDestacadosLineaUno, .contenedorDestacadosLineaDos {
+        /*flex-wrap: wrap;
+        justify-content: center;*/
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    .contenedorTarjetas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .imagenTarjeta {
+        margin: 0.5rem;
+        width: 100px;
+    }
+}
+
+
+
+/* Media Query para pantallas entre 1025px y 1080px */
+@media (min-width: 64.0625rem) and (max-width: 67.5rem) { /* 1025px = 64.0625rem y 1080px = 67.5rem */
+
+    #navbar_home {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    #navbar_home a {
+        width: 15%;
+        padding: 1rem;
+    }
+
+    .carrousel {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 1rem;
+    }
+
+    .contenedorCurso {
+        width: 20%;
+        padding: 1rem;
+    }
+
+    .contenedorPasos {
+        width: 70%;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pasos {
+        width: 20%;
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    .contenedorDestacadosLineaUno,
+    .contenedorDestacadosLineaDos {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .contenedorImagenHora {
+        width: 90%;
+    }
+
+    .horaCursoLinea1,
+    .horaCursoLinea2 {
+        font-size: 1rem;
+    }
+
+    .contenedorDetallesComprar {
+        padding: 1rem;
+    }
+
+    .contenedorTarjetas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .imagenTarjeta {
+        margin: 0.5rem;
+        width: 8rem; /* Equivalente a 128px */
+    }
+
+    .tituloCursosDestacados {
+        font-size: 2.25rem; /* Escalado a 36px */
+    }
+
+    .btnDetallesCompra {
+        padding: 0.625rem 1.25rem; /* Ajustes de tamaño relativos */
+        font-size: 1rem;
     }
 }
