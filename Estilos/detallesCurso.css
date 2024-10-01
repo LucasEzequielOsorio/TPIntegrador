@@ -1,3 +1,4 @@
+
 .contenedorDetalle {
     margin-top: 2%;
     display: flex;
@@ -5,7 +6,7 @@
     border: lightcoral;
     padding: 1.25rem; 
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
-    width: 50%;
+    width: 90%;
     justify-content: center;
     align-items: center;
 }
@@ -47,9 +48,7 @@ button:hover {
     font-size: 2rem;
 }
 
-.detallesCurso h2 {
-    text-align: center;
-}
+
 
 .detallesCurso p {
     text-align: justify;
@@ -170,6 +169,7 @@ button:hover {
 .contenedorRecomendados {
     margin-top: 5rem;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
     width: 90%;
 }
@@ -184,6 +184,18 @@ button:hover {
     font-weight: bold;
 }
 
+
+
+/*--------------------------------------------------------------------*/
+@media (max-width: 768px) {
+    .contenedorDetalle {
+        flex-direction: column;
+    }
+
+    .contenedorRecomendados{
+        width: 50%;
+    }
+}
 
 /* Media query para pantallas pequeñas 480px == 30rem */
 @media (max-width: 30rem) {
@@ -208,6 +220,7 @@ button:hover {
     .contenedorContenidos, .contenedorDocente {
         width: 90%;
     }
+
 
     .fotoCurso {
         margin-top: 0;
