@@ -236,6 +236,7 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: 0.5rem;
+        justify-content: center;
     }
 
     .subtituloCarrito {
@@ -295,11 +296,13 @@
 
     .filaCarrito input {
         grid-row: 1;
-        width: 80%;
+        width: 1rem;
         padding: 0.4rem;
         text-align: center;
         font-size: 0.9rem;
+        margin-left: 1rem;
     }
+
 
     .btnBorrarFila {
         display: block;
@@ -341,6 +344,8 @@
     .totalCompraCarrito span {
         font-size: 1rem;
     }
+
+
 }
 
 
