@@ -34,10 +34,11 @@
 .carrousel{
     width: 90%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
     padding: 2em;
+    gap: 1rem;
 }
 
 .img{
@@ -385,9 +386,7 @@ button:hover {
 
     #navbar_home {
         display: flex;
-        justify-content: space-around;
-        padding: 1rem;
-        gap: 0.5rem;
+        
     }
 
     #navbar_home a {

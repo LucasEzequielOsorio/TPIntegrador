@@ -57,3 +57,15 @@
     font-size: 1rem;
 }
 
+@media screen and (max-width: 480px) {
+    .formularioPagoFila *
+    {
+        font-size: 0.6rem;
+    }
+}
+@media screen and (max-width: 767px){
+    .formularioPago
+    {
+        width: 80%;
+    }
+}
