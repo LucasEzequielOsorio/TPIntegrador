@@ -300,18 +300,18 @@
         padding: 0.4rem;
         text-align: center;
         font-size: 0.9rem;
-        margin-left: 1rem;
+        margin-left: 6rem;
     }
 
 
     .btnBorrarFila {
         display: block;
-        margin: 0 auto;
         font-size: 1.2rem;
         padding: 0.25rem;
         cursor: pointer;
         background: none;
         border: none;
+        margin-left: 6rem;
     }
 
     
@@ -373,6 +373,11 @@
     .filaCarrito input {
         width: 1rem;
         padding: 0.25rem;
+        margin: 0 auto;
+    }
+
+    .btnBorrarFila{
+        margin: 0 auto;
     }
 
     .btnsAccionCarrito {
