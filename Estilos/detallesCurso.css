@@ -195,6 +195,10 @@ button:hover {
     .contenedorRecomendados{
         width: 50%;
     }
+
+    .contenedorDocente{
+            width: 70%;
+    }
 }
 
 /* Media query para pantallas pequeñas 480px == 30rem */
