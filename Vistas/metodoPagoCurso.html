@@ -30,27 +30,27 @@
             </div>
 
             <div class="formularioPagoFila">
-                <input type="radio" required name="tipoTarjeta">
+                <input type="radio" required name="tipoTarjeta" checked>
                 <input type="radio" required name="tipoTarjeta">
             </div>
 
-            <div class="formularioPagoFila">
+            <div class="formularioPagoFila columnaNumTarj">
                 <label for="numeroTarjeta" class="campoInput">Número de tarjeta</label>
                 <input type="number" required name="numeroTarjeta" id="numeroTarjeta" min="1">
             </div>
 
-            <div class="formularioPagoFila">
+            <div class="formularioPagoFila columnaNomTarj">
                 <label for="name" class="campoInput">Nombre (como figura en tarjeta)</label>
                 <input type="text" required name="name" id="name">
             </div>
 
-            <div class="formularioPagoFila">
-                <div class="despForm">
+            <div class="formularioPagoFila contenedorVecCodSeg">
+                <div class="despFormVenc">
                     <label for="vencimientoMes" class="campoInput">Vencimiento</label>
                     <input type="month" required name="" id="vencimientoMes" min="1900" >
                 </div>
 
-                <div class="despForm">
+                <div class="despFormCodSeg">
                     <label for="codigoSeguridad" class="campoInput">Código de seguridad</label>
                     <input type="number" required name="" id="codigoSeguridad" min="1">
                 </div>
