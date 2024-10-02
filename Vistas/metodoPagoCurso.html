@@ -18,47 +18,50 @@
 
         <form action="pago-confirmado.html" class="formularioPago">
 
-            <h4>Información de Pago</h4>
-
-            <div class="formularioPagoFila">
-                <label>Tipo de tarjeta:</label>
-            </div>
-
-            <div>
-                <div class="formularioPagoFila">
-                    <label>Crédito</label>
-                    <label>Débito</label>
-                </div>
+            <div class="formularioPagoFila contenedorInfoPago">
+                <h2>Información de Pago</h4>
 
                 <div class="formularioPagoFila">
-                    <input type="radio" required name="tipoTarjeta" checked>
-                    <input type="radio" required name="tipoTarjeta">
+                    <label>Tipo de tarjeta:</label>
                 </div>
-            </div>
 
-            <div class="formularioPagoFila columnaNumTarj">
-                <label for="numeroTarjeta" class="campoInput">Número de tarjeta</label>
-                <input type="number" required name="numeroTarjeta" id="numeroTarjeta" min="1">
-            </div>
+                <div class="contenedorTipoTarj">
+                    <div class="formularioPagoFila">
+                        <label class="tipoTarj">Crédito</label>
+                        <label class="tipoTarj">Débito</label>
+                    </div>
 
-            <div class="formularioPagoFila columnaNomTarj">
-                <label for="name" class="campoInput">Nombre (como figura en tarjeta)</label>
-                <input type="text" required name="name" id="name">
-            </div>
+                    <div class="formularioPagoFila">
+                        <input class="tipoTarj" type="radio" required name="tipoTarjeta" checked>
+                        <input class="tipoTarj" type="radio" required name="tipoTarjeta">
+                    </div>
+                </div>
 
-            <div class="formularioPagoFila contenedorVecCodSeg">
-                <div class="despFormVenc">
+            
+                <div class="formularioPagoFila despFormVencCod">
+                    <label for="numeroTarjeta" class="campoInput">Número de tarjeta</label>
+                    <input type="number" required name="numeroTarjeta" id="numeroTarjeta" min="1">
+                </div>
+
+                <div class="formularioPagoFila despFormVencCod">
+                    <label for="name" class="campoInput">Nombre (como figura en tarjeta)</label>
+                    <input type="text" required name="name" id="name">
+                </div>
+
+            
+                <div class="despFormVencCod">
                     <label for="vencimientoMes" class="campoInput">Vencimiento</label>
                     <input type="month" required name="" id="vencimientoMes" min="1900" >
                 </div>
 
-                <div class="despFormCodSeg">
+                <div class="despFormVencCod">
                     <label for="codigoSeguridad" class="campoInput">Código de seguridad</label>
                     <input type="number" required name="" id="codigoSeguridad" min="1">
                 </div>
+
+                <button type="submit">REALIZAR PAGO</button>
             </div>
 
-            <button type="submit">REALIZAR PAGO</button>
 
         </form>
 
