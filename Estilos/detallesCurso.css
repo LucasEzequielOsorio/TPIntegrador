@@ -213,6 +213,10 @@ button:hover {
     .contenedorDocente{
             width: 70%;
     }
+
+    .detallesCurso h2 {
+        text-align: center;
+    }
 }
 
 /* Media query para pantallas pequeñas 480px == 30rem */
