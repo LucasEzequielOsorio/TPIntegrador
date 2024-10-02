@@ -185,8 +185,8 @@
     }
     .gift_card_preview
     {
-        width: 75vw;
-        height: 75vw;
+        width: min(75vw, 50vh);
+        height: min(75vw, 50vh);
     }
     .gift_card_personalization_dashboard
     {
@@ -209,8 +209,8 @@
     }
     .gift_card_preview
     {
-        width: 60vw;
-        height: 60vw;
+        width: min(60vw, 50vh);
+        height: min(60vw, 50vh);
     }
     .gift_card_personalization_dashboard
     {
