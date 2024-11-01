@@ -15,25 +15,25 @@
         <form action="pago-gift-card.html" class="gift_card_personalization_dashboard">
             <h1>Personalizar gift card</h1>
             <div class="gift_card_personalization_dashboard_row left">
-                <label for="">Destinatario:</label><input type="text" placeholder="Nombre de destinatario" class="gift_card_personalization_dashboard_input" required>
+                <label for="gift_card_personalization_dashboard_destinatary">Destinatario:</label><input type="text" placeholder="Nombre de destinatario" id="gift_card_personalization_dashboard_destinatary" class="gift_card_personalization_dashboard_input" required>
             </div>
             <h2>Color</h2>
             <div class="gift_card_personalization_dashboard_row">
                 <div class="gift_card_personalization_dashboard_radio_container">
                     <label for="rojo" class="gift_card_personalization_radio_label">Rojo</label>
-                    <input type="radio" id="rojo" name="color" value="RED" checked>
+                    <input type="radio" id="rojo" name="color" value="RED" class="color_option" checked>
                 </div>
                 <div class="gift_card_personalization_dashboard_radio_container">
                     <label for="azul" class="gift_card_personalization_radio_label">Azul</label>
-                    <input type="radio" id="azul" name="color" value="BLUE">
+                    <input type="radio" id="azul" name="color" value="BLUE" class="color_option">
                 </div>
                 <div class="gift_card_personalization_dashboard_radio_container">
                     <label for="verde" class="gift_card_personalization_radio_label">Verde</label>
-                    <input type="radio" id="verde" name="color" value="GREEN">
+                    <input type="radio" id="verde" name="color" value="GREEN" class="color_option">
                 </div>
                 <div class="gift_card_personalization_dashboard_radio_container">
                     <label for="amarillo" class="gift_card_personalization_radio_label">Amarillo</label>
-                    <input type="radio" id="amarillo" name="color" value="YELLOW">
+                    <input type="radio" id="amarillo" name="color" value="YELLOW" class="color_option">
                 </div>
             </div>
             <div class="gift_card_personalization_dashboard_row">
@@ -41,69 +41,69 @@
             <h2>Tamaño de texto</h2>
             <div class="gift_card_personalization_dashboard_row">
                 <div class="gift_card_personalization_dashboard_radio_container">
-                    <label for="20" class="gift_card_personalization_radio_label">20px</label>
-                    <input type="radio" id="20" name="text_size" value="20">
+                    <label for="xs" class="gift_card_personalization_radio_label">Muy pequeña</label>
+                    <input type="radio" id="xs" name="text_size" value="xs" class="text_size_option">
                 </div>
                 <div class="gift_card_personalization_dashboard_radio_container">
-                    <label for="28" class="gift_card_personalization_radio_label">28px</label>
-                    <input type="radio" id="28" name="text_size" value="28" checked>
+                    <label for="s" class="gift_card_personalization_radio_label">Pequeña</label>
+                    <input type="radio" id="s" name="text_size" value="s" class="text_size_option" checked>
                 </div>
                 <div class="gift_card_personalization_dashboard_radio_container">
-                    <label for="32" class="gift_card_personalization_radio_label">32px</label>
-                    <input type="radio" id="32" name="text_size" value="32">
+                    <label for="m" class="gift_card_personalization_radio_label">Mediana</label>
+                    <input type="radio" id="m" name="text_size" value="m" class="text_size_option">
                 </div>
                 <div class="gift_card_personalization_dashboard_radio_container">
-                    <label for="48" class="gift_card_personalization_radio_label">48px</label>
-                    <input type="radio" id="48" name="text_size" value="48">
+                    <label for="l" class="gift_card_personalization_radio_label">Grande</label>
+                    <input type="radio" id="l" name="text_size" value="l" class="text_size_option">
                 </div>
                 <div class="gift_card_personalization_dashboard_radio_container">
-                    <label for="60" class="gift_card_personalization_radio_label">60px</label>
-                    <input type="radio" id="60" name="text_size" value="60">
+                    <label for="xl" class="gift_card_personalization_radio_label">Muy grande</label>
+                    <input type="radio" id="xl" name="text_size" value="xl" class="text_size_option">
                 </div>
             </div>
             <div class="gift_card_personalization_dashboard_row">
             </div>
             <h2>Monto</h2>
             <div class="gift_card_personalization_dashboard_row left">
-                <label for="">Monto $:</label>
-                <input type="text" placeholder="Monto $" class="gift_card_personalization_dashboard_input" required>
+                <label for="gift_card_personalization_dashboard_amount">Monto $:</label>
+                <input type="number" placeholder="Monto $" class="gift_card_personalization_dashboard_input" id="gift_card_personalization_dashboard_amount" required>
             </div>
             <h3>Ubicación</h3>
             <div class="gift_card_personalization_dashboard_row">
                 <div class="gift_card_personalization_dashboard_radio_container">
                     <label for="up_left" class="gift_card_personalization_radio_label">Arriba izquierda</label>
-                    <input type="radio" id="up_left" name="amount_placement" value="UP_LEFT">
+                    <input type="radio" id="up_left" name="amount_placement" value="UP_LEFT" class="amount_placement_option">
                 </div>
                 <div class="gift_card_personalization_dashboard_radio_container">
                     <label for="up_right" class="gift_card_personalization_radio_label">Arriba derecha</label>
-                    <input type="radio" id="up_right" name="amount_placement" value="UP_RIGHT" checked>
+                    <input type="radio" id="up_right" name="amount_placement" value="UP_RIGHT" class="amount_placement_option" checked>
                 </div>
                 <div class="gift_card_personalization_dashboard_radio_container">
                     <label for="down_left" class="gift_card_personalization_radio_label">Abajo izquierda</label>
-                    <input type="radio" id="down_left" name="amount_placement" value="DOWN_LEFT">
+                    <input type="radio" id="down_left" name="amount_placement" value="DOWN_LEFT" class="amount_placement_option">
                 </div>
                 <div class="gift_card_personalization_dashboard_radio_container">
                     <label for="down_right" class="gift_card_personalization_radio_label">Arriba derecha</label>
-                    <input type="radio" id="down_right" name="amount_placement" value="DOWN_RIGHT">
+                    <input type="radio" id="down_right" name="amount_placement" value="DOWN_RIGHT" class="amount_placement_option">
                 </div>
             </div>
             <h2>Fondo</h2>
             <div class="gift_card_personalization_dashboard_row">
                 <div class="gift_card_personalization_dashboard_radio_container">
-                    <label for="arriba_izquierda" class="gift_card_personalization_radio_label gift_card_personalization_background_solid"><span>color sólido</span></label>
-                    <input type="radio" id="arriba_izquierda" name="background" value="ARRIBA_IZQUIERDA" checked>
+                    <label for="solid" class="gift_card_personalization_radio_label gift_card_personalization_background_solid"><span>color sólido</span></label>
+                    <input type="radio" id="solid" name="background" value="SOLID" class="background_style_option" checked>
                 </div>
                 <div class="gift_card_personalization_dashboard_radio_container">
-                    <label for="arriba_derecha" class="gift_card_personalization_radio_label gift_card_personalization_background_linear_gradient"><span>gradiente lineal</span></label>
-                    <input type="radio" id="arriba_derecha" name="background" value="ARRIBA_DERECHA">
+                    <label for="linear_gradient" class="gift_card_personalization_radio_label gift_card_personalization_background_linear_gradient"><span>gradiente lineal</span></label>
+                    <input type="radio" id="linear_gradient" name="background" value="LINEAR_GRADIENT" class="background_style_option">
                 </div>
                 <div class="gift_card_personalization_dashboard_radio_container">
-                    <label for="abajo_izquierda" class="gift_card_personalization_radio_label gift_card_personalization_background_radial_gradient"><span>gradiente radial</span></label>
-                    <input type="radio" id="abajo_izquierda" name="background" value="ABAJO_IZQUIERDA">
+                    <label for="radial_gradient" class="gift_card_personalization_radio_label gift_card_personalization_background_radial_gradient"><span>gradiente radial</span></label>
+                    <input type="radio" id="radial_gradient" name="background" value="RADIAL_GRADIENT" class="background_style_option">
                 </div>
                 <div class="gift_card_personalization_dashboard_radio_container">
-                    <label for="abajo_derecha" class="gift_card_personalization_radio_label gift_card_personalization_background_stripes"><span>rayado</span></label>
-                    <input type="radio" id="abajo_derecha" name="background" value="ABAJO_DERECHA">
+                    <label for="striped" class="gift_card_personalization_radio_label gift_card_personalization_background_stripes"><span>rayado</span></label>
+                    <input type="radio" id="striped" name="background" value="STRIPED" class="background_style_option">
                 </div>
             </div>
             <div class="gift_card_personalization_dashboard_row center">
@@ -113,7 +113,7 @@
         <div class="gift_card_preview_container">
             <div class="gift_card_preview">
                 <div class="gift_card_preview_amount">
-                    <span>$0000</span>
+                    <span>$0</span>
                 </div>
                 <div class="gift_card_preview_center">
                     <span class="gift_card_preview_text">Gift card para</span>
@@ -125,4 +125,5 @@
     <footer id="footer"></footer>
 </body>
 <script src="../scripts/tema.js"></script>
+<script src="../scripts/gift-card.js"></script>
 </html>

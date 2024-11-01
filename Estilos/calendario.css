@@ -56,6 +56,7 @@
     display: grid;
     width: 90%;
     grid-template-columns: repeat(7, 14.28571429%);
+    z-index: 0;
 }
 .calendar_day
 {
@@ -81,23 +82,76 @@
 {
     display: flex;
     width: 100%;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 .calendar_item_course
 {
-    width: 50%;
+    width: 60%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
     padding: 0.5rem;
     border-radius: 1rem;
+    border: 0px;
     margin-bottom: 1rem;
     background-color: blue;
     color: white;
+}
+.pop_up_container
+{
+    z-index: 1;
+}
+.course_pop_up
+{
+    display: grid;
+    position: fixed;
+    border-radius: 1rem;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    top: calc(50% - min(50vw, 50vh)/2);
+    left: calc(50% - min(50vw, 50vh)/2);
+    height: min(50vw, 50vh);
+    width:  min(50vw, 50vh);
+    z-index: 1;
+    grid-template-areas: "empty-1 empty-2 close"
+                         "empty-1 title empty-3"
+                         "empty-1 description empty-3"
+                         "empty-1 more empty-3";
+    grid-template-columns: 10% 80% 10%;
+}
+.pop_up_course_X
+{
+    justify-self: center;
+    align-self: center;
+    grid-area: close;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    border: 0px;
+    color: white;
+    background-color: red;
+}
+.pop_up_course_title
+{
+    grid-area: title;
+}
+.pop_up_course_description
+{
+    grid-area: description;
+}
+.pop_up_course_button
+{
+    grid-area: more;
+    color: white;
+    background-color: blue;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: fit-content;
+    height: fit-content;
 }
 
 .calendar_item_course:hover
