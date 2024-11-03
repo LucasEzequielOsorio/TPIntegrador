@@ -1,20 +1,44 @@
+/* Estructura de la página */
+html, body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
 
 .formulario {
-    margin-top: 5rem;
+    margin-top: 3rem;
     padding: 1rem;
     background: #fff;
     text-align: center;
+    flex: 1;
 }
 
-.contenedor {
+.contenedorInfo {
     padding: 1rem;
 }
 
 button.button {
+    font-family: Arial, Helvetica, sans-serif;
     margin-top: 1rem;
     background-color: #d9534f;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
 }
 
 button.button:hover {
     background-color: #c9302c;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
 }
