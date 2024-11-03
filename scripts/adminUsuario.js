@@ -19,7 +19,7 @@ function registrarUsuario() {
     const user = { nombre, apellido, email, password };
     users.push(user);
     localStorage.setItem("users", JSON.stringify(users));
-    alert("Registro exitoso. Ahora puede iniciar sesión.");
+    alert("Registro exitoso! Puede iniciar sesión!");
     window.location.href = "../index.html";
 }
 
@@ -29,16 +29,24 @@ function InicioSesion() {
     const password = document.getElementById("password").value;
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Verificar si hay usuarios registrados
+    if (users.length === 0) {
+        alert("La cuenta no existe, debe registrarse!");
+        return;
+    }
+
     const user = users.find(user => user.email === email && user.password === password);
 
     if (user) {
         localStorage.setItem("activeUser", JSON.stringify(user));
-        alert("Inicio de sesión exitoso.");
+        alert("Inicio de sesión exitoso!");
         window.location.href = "../Vistas/inicio.html";
     } else {
-        alert("Mail o contraseña incorrectos.");
+        alert("Mail o contraseña incorrectos");
     }
 }
+
 
 // Función para eliminar la cuenta del usuario
 function eliminarCuenta() {
@@ -61,6 +69,7 @@ function mostrarPerfil() {
         document.getElementById("apellido").textContent = activeUser.apellido;
         document.getElementById("email").textContent = activeUser.email;
     } else {
-        alert("error.");
+        alert("Usted no ha iniciado sesión");
+        window.location.href = "../index.html";
     }
 }
