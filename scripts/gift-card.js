@@ -117,3 +117,29 @@ function setBackground()
             nodoGiftCard.style.background = "linear-gradient("+ backgroundColor +", 15%, black, 25%, "+ backgroundColor +", 45%, black, 55%, "+ backgroundColor +", 75%, black, 85%, "+ backgroundColor +")";            
     }
 }
+
+
+var nodoEmailDestinatario = document.querySelector("#gift_card_personalization_dashboard_destinatary_email");
+var nodoSubmit = document.querySelector(".submit_button");
+nodoSubmit.addEventListener("click", (e)=>{
+    e.preventDefault();
+    let userExists = false;
+    JSON.parse(localStorage.getItem("users")).forEach((user)=>{
+        if(user.email == nodoEmailDestinatario.value)
+        {
+            userExists = true;
+        }
+    });
+    if(!userExists)
+    {
+        alert("No existe un usuario con ese correo electrónico.");
+    }
+    else
+    {
+        //Este código está incompleto y no va a funcionar mientras no esté hecha la lógica del carrito.
+        /*let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        carrito.push();
+        localStorage.setItem("carrito", JSON.stringify(carrito));*/
+        nodoForm.submit();
+    }
+});
