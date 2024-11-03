@@ -177,6 +177,11 @@ button:hover {
 }
 
 
+.carrousel .contenedorCurso {
+    display: none; /* Ocultar todos los cursos inicialmente */
+}
+
+  
 
 /* ------------------------------------------------------------------------------- */
 /* Media Query para pantallas de hasta 480px */
@@ -191,10 +196,6 @@ button:hover {
         padding: 0.5rem;
         width: 50%;
         margin: 0.5rem 0;
-    }
-    .carrousel {
-        flex-direction: column;
-        padding: 1rem;
     }
 
     .contenedorCurso {
@@ -256,6 +257,25 @@ button:hover {
         margin-bottom: 1rem;
         width: 80%;
     }
+
+    .carrousel {
+        width: 50%;
+        display: flex; /* O display: block; dependiendo del diseño */
+        overflow: hidden; /* Para ocultar los elementos que no estén visibles */
+        position: relative;
+        right: 1.1rem;
+    }
+    
+    .cursoCarrousel {
+        flex: 0 0 100%; /* Hacer que el div ocupe el 100% del ancho del contenedor */
+        display: block; /* Asegurarse de que se muestre como bloque */
+        flex-direction: column;
+    }
+    
+    /* Opcionalmente puedes ocultar los demás divs dentro de carrousel */
+    .carrousel > div:not(.cursoCarrousel) {
+        display: none; /* Ocultar otros divs que no sean el cursoCarrousel */
+    }
 }
 
 
@@ -263,10 +283,7 @@ button:hover {
 
 /* Media Query para pantallas entre 480px y 768px */
 @media (min-width: 30rem) and (max-width: 48rem) { /* 480px = 30rem y 768px = 48rem */
-    .carrousel {
-        flex-direction: column;
-        padding: 1rem;
-    }
+    
     
     .contenedorCurso {
         width: 80%;
@@ -318,6 +335,25 @@ button:hover {
         margin: 0.5rem;
         width: auto;
     }
+
+    .carrousel {
+        width: 50%;
+        display: flex; /* O display: block; dependiendo del diseño */
+        overflow: hidden; /* Para ocultar los elementos que no estén visibles */
+        position: relative;
+        right: 1.1rem;
+    }
+    
+    .cursoCarrousel {
+        flex: 0 0 100%; /* Hacer que el div ocupe el 100% del ancho del contenedor */
+        display: block; /* Asegurarse de que se muestre como bloque */
+        flex-direction: column;
+    }
+    
+    /* Opcionalmente puedes ocultar los demás divs dentro de carrousel */
+    .carrousel > div:not(.cursoCarrousel) {
+        display: none; /* Ocultar otros divs que no sean el cursoCarrousel */
+    }
 }
 
 /* Media Query para resoluciones de tablets (768px a 1024px) */
@@ -334,11 +370,7 @@ button:hover {
         width: 30%;
         margin: 0.5rem 0;
     }
-    .carrousel {
-        flex-wrap: wrap;
-        padding: 1rem;
-        flex-direction: column;
-    }
+    
 
     .contenedorCurso {
         width: 45%;
@@ -351,20 +383,14 @@ button:hover {
         flex-direction: column;
         align-items: center;
     }
-
     .pasos {
         width: 90%;
         margin-bottom: 1rem;
     }
-
     .contenedorDestacadosLineaUno, .contenedorDestacadosLineaDos {
-        /*flex-wrap: wrap;
-        justify-content: center;*/
         flex-direction: column;
         align-items: center;
     }
-
-
 
     .contenedorTarjetas {
         display: flex;
@@ -375,6 +401,26 @@ button:hover {
     .imagenTarjeta {
         margin: 0.5rem;
         width: 100px;
+    }
+
+    .carrousel {
+        width: 50%;
+        display: flex; /* O display: block; dependiendo del diseño */
+        overflow: hidden; /* Para ocultar los elementos que no estén visibles */
+        position: relative;
+        right: 1.1rem;
+        
+    }
+    
+    .cursoCarrousel {
+        flex: 0 0 100%; /* Hacer que el div ocupe el 100% del ancho del contenedor */
+        display: block; /* Asegurarse de que se muestre como bloque */
+        flex-direction: column;
+    }
+    
+    /* Opcionalmente puedes ocultar los demás divs dentro de carrousel */
+    .carrousel > div:not(.cursoCarrousel) {
+        display: none; /* Ocultar otros divs que no sean el cursoCarrousel */
     }
 }
 

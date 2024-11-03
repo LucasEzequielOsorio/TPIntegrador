@@ -167,7 +167,6 @@ button:hover {
 /* ------------------------------------------------------------------------------------------- */
 
 .contenedorRecomendados {
-    margin-top: 5rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -184,6 +183,11 @@ button:hover {
     font-weight: bold;
 }
 
+.tituloCursosRecom {
+    margin-top: 4rem;
+    font-size: 2rem;
+    text-align: center;
+}
 
 
 /*--------------------------------------------------------------------*/
