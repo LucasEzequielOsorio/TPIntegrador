@@ -16,36 +16,32 @@
         </a>
 
     </header>
-
-    <form class="formulario" action="../index.html">
-
+    
+    <form class="formulario" onsubmit="event.preventDefault(); reestablecerPass();">
         <h1>Reestablecer Contraseña</h1>
         
         <div class="contenedor">
-
             <div class="inputContenedor">
                 <img src="../imagenes/mailLogo.png" alt="Correo Electronico">
-                <input type="email" required placeholder="Correo Electronico">
+                <input type="email" id="email" required placeholder="Correo Electronico">
             </div>
 
             <div class="inputContenedor">
                 <img src="../imagenes/keyLogo.png" alt="Contraseña">
-                <input type="password" required placeholder="Contraseña">
+                <input type="password" id="password" required placeholder="Nueva Contraseña">
             </div>
 
             <div class="inputContenedor">
                 <img src="../imagenes/keyLogo.png" alt="Contraseña">
-                <input type="password" required placeholder="Repita la Contraseña">
+                <input type="password" id="confirmPassword" required placeholder="Confirmar Nueva Contraseña">
             </div>
 
             <input type="submit" value="Reestablecer Contraseña" class="button">
-            
             <p>¿Ya tienes una cuenta? <a class="link" href="../index.html">Iniciar Sesión</a></p>
-
         </div>
-
     </form>
 
 </body>
-
+<script src="../scripts/adminUsuario.js"></script>
 </html>
+

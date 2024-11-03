@@ -30,9 +30,11 @@ function InicioSesion() {
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Verificar si hay usuarios registrados
-    if (users.length === 0) {
-        alert("La cuenta no existe, debe registrarse!");
+
+    //valida si la cuenta ya esta creada
+    const userExitente = users.find(user => user.email === email);
+    if (!userExitente) {
+        alert("Este usuario no se encuentra registrado. Debe registrarse!");
         return;
     }
 
@@ -73,3 +75,40 @@ function mostrarPerfil() {
         window.location.href = "../index.html";
     }
 }
+
+
+// Función para reestablecer contraseña
+function reestablecerPass() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+    
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Verificar si todos los campos están completos
+    if (!email || !password || !confirmPassword) {
+        alert("Todos los campos son obligatorios.");
+        return;
+    }
+
+    // Verificar que las contraseñas coincidan
+    if (password !== confirmPassword) {
+        alert("Las contraseñas no coinciden.");
+        return;
+    }
+
+    // Verificar si el correo electrónico está registrado
+    const userIndex = users.findIndex(user => user.email === email);
+    if (userIndex === -1) {
+        alert("Este usuario no se encuentra registrado. Debe registrarse!");
+        return;
+    }
+
+    // Reemplazar la contraseña del usuario
+    users[userIndex].password = password;
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Contraseña reestablecida exitosamente.");
+    window.location.href = "../index.html";
+}
+
