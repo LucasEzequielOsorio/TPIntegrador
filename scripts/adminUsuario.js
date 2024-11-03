@@ -20,7 +20,7 @@ function registrarUsuario() {
     users.push(user);
     localStorage.setItem("users", JSON.stringify(users));
     alert("Registro exitoso. Ahora puede iniciar sesión.");
-    window.location.href = "./index.html";
+    window.location.href = "../index.html";
 }
 
 // Función para el inicio de sesión
@@ -49,7 +49,7 @@ function eliminarCuenta() {
         localStorage.setItem("users", JSON.stringify(users));
         localStorage.removeItem("activeUser");
         alert("Cuenta eliminada.");
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
     }
 }
 

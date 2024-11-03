@@ -4,17 +4,21 @@
     <link rel="shortcut icon" href="../imagenes/iconoPestania.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/tema.css">
+    <link rel="stylesheet" href="../estilos/calendario.css">
     <link rel="stylesheet" href="../Estilos/index.css">
     <link rel="stylesheet" href="../Estilos/adminPerfil.css">
+    <link rel="stylesheet" href="../Estilos/detallesCurso.css">
     <title>Perfil - CoursEd</title>
 </head>
 <body onload="mostrarPerfil()">
 
-    <header class="header">
-        <a href="../index.html" class="logo logo_desktop">
-            <span class="logo_black">Cours</span><span class="logo_blue">Ed</span>
-        </a>
-    </header>
+    <header id="header"></header>
+    <nav class="navbar">
+        <a href="javascript:history.back()">Atrás</a>
+        <a href="../Vistas/inicio.html">Página Principal</a>
+        <a href="../index.html">Cerrar Sesión</a>
+    </nav>
 
     <div class="formulario">
         <h1>Perfil</h1>
@@ -26,6 +30,8 @@
         </div>
     </div>
 
+    <footer id="footer"></footer>
 </body>
 <script src="../scripts/adminUsuario.js"></script>
+<script src="../scripts/tema.js"></script>
 </html>

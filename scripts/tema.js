@@ -54,13 +54,13 @@ const footer = `
 const navbar_home = `
         <a href="./calendario.html">Próximos cursos</a>
         <a href="./gift-card.html">¡Regalá CoursEd!</a>
-        <a href="#">Mi Perfil</a>
+        <a href="../Vistas/adminPerfil.html">Mi Perfil</a>
         <a href="./contacto.html">Contacto</a>
         <a href="../index.html">Cerrar Sesión</a>`;
 
 const navbar_back_and_home = `
     <a href="javascript:history.back()">Atrás</a>
-    <a href="#">Mi Perfil</a>
+    <a href="../Vistas/adminPerfil.html">Mi Perfil</a>
     <a href="./inicio.html">Página Principal</a>`;
 if(document.getElementById("header") != null)
 {    
