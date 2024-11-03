@@ -193,17 +193,29 @@ button:hover {
 /*--------------------------------------------------------------------*/
 @media (max-width: 1223px) {
     .navbar {
-        flex-direction: column;
+        flex-flow: row nowrap;
         align-items: center;
         gap: 1rem;
+        width: 100%;
     }
 
     .navbar a{
-        width: 40%;
+        width: 20%;
     }
 }
 
+@media (max-width: 801px) {
+    .navbar {
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
 
+    .navbar a{
+        width: 20%;
+    }
+}
 
 @media (max-width: 768px) {
     .contenedorDetalle {

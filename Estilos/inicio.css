@@ -506,3 +506,22 @@ button:hover {
         font-size: 1rem;
     }
 }
+
+@media (min-width: 1145px) and (max-width: 1307px) {
+    #navbar_home {
+        width: 80%;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    #navbar_home a {
+        width: 15%;
+        margin: 0.5rem 0;
+    }
+
+    .carrousel{
+        width: 100%;
+    }
+}
