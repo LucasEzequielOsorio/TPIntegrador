@@ -5,19 +5,21 @@ const header = `
     <a href="../vistas/inicio.html" class="logo logo_tiny">
         <span class="logo_black">C:</span><span class="logo_blue">Ed</span>
     </a>
-    <form class="search_bar" action="../vistas/inicio.html">
+    <form class="search_bar" onsubmit="buscarCurso(event)">
         <input list="courses" name="course" id="course">
             <datalist id="courses">
                 <option value="Webserver Administration">
-                <option value="Seguridad Informatica para todos">
+                <option value="Seguridad Informatica">
                 <option value="Direccionamiento IP y Subredes Cisco">
-                <option value="Seguridad Informatica desde cero">
+                <option value="Seguridad Informatica">
                 <option value="Ciberseguridad Todo en Uno">
-                <option value="Seguridad Linux">
-                <option value="Desarrollo de software seguro">
+                <option value="Seguridad Linux desde cero">
                 <option value="Desarrollo de software seguro">
                 <option value="Excel Completo">
                 <option value="Máster en SQL">
+                <option value="Programacion con Phyton">
+                <option value="Power BI">
+                <option value="Fundamentos de Cisco">
             </datalist>
         <button type="submit">Buscar</button>
     </form>
@@ -50,6 +52,41 @@ const footer = `
             <li><a href="https://facebook.com">Facebook</a></li>
         </ul>
     </div>`;
+
+
+//mapear los nombres de los cursos a los archivos HTML de cursos correspondientes
+const cursosHTML = {
+    "Webserver Administration": "detallesCurso1.html",
+    "Seguridad Informatica para todos": "detallesCurso2.html",
+    "Direccionamiento IP y Subredes Cisco": "detallesCurso3.html",
+    "Seguridad Informatica": "detallesCurso4.html",
+    "Ciberseguridad Todo en Uno": "detallesCurso5.html",
+    "Seguridad Linux desde cero": "detallesCurso6.html",
+    "Desarrollo de software seguro": "detallesCurso7.html",
+    "Excel Completo": "detallesCurso8.html",
+    "Máster en SQL": "detallesCurso9.html",
+    "Programacion con Phyton": "detallesCurso10.html",
+    "Power BI": "detallesCurso11.html",
+    "Fundamentos de Cisco": "detallesCurso12.html"
+};
+
+//buscar y redirigir al curso correspondiente
+function buscarCurso(event) {
+    event.preventDefault();
+    const cursoSeleccionado = document.getElementById("course").value;
+    const paginaCurso = cursosHTML[cursoSeleccionado];
+
+    if (paginaCurso) {
+        // Redirige al HTML correspondiente si coinciden
+        window.location.href = `../vistasDetallesCursos/${paginaCurso}`;
+    } else {
+        alert("Curso no encontrado. Por favor, seleccione uno de la lista.");
+    }
+}
+
+
+
+
 
 const navbar_home = `
         <a href="./calendario.html">Próximos cursos</a>
