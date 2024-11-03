@@ -1,0 +1,20 @@
+
+.formulario {
+    margin-top: 5rem;
+    padding: 1rem;
+    background: #fff;
+    text-align: center;
+}
+
+.contenedor {
+    padding: 1rem;
+}
+
+button.button {
+    margin-top: 1rem;
+    background-color: #d9534f;
+}
+
+button.button:hover {
+    background-color: #c9302c;
+}

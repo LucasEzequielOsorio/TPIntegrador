@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../imagenes/iconoPestania.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Estilos/index.css">
+    <link rel="stylesheet" href="../Estilos/adminPerfil.css">
+    <title>Perfil - CoursEd</title>
+</head>
+<body onload="mostrarPerfil()">
+
+    <header class="header">
+        <a href="../index.html" class="logo logo_desktop">
+            <span class="logo_black">Cours</span><span class="logo_blue">Ed</span>
+        </a>
+    </header>
+
+    <div class="formulario">
+        <h1>Perfil</h1>
+        <div class="contenedor">
+            <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+            <p><strong>Apellido:</strong> <span id="apellido"></span></p>
+            <p><strong>Correo:</strong> <span id="email"></span></p>
+            <button class="button" onclick="eliminarCuenta()">Eliminar cuenta</button>
+        </div>
+    </div>
+
+</body>
+<script src="../scripts/adminUsuario.js"></script>
+</html>

@@ -10,47 +10,40 @@
 <body>
 
     <header class="header">
-
         <a href="../index.html" class="logo logo_desktop">
             <span class="logo_black">Cours</span><span class="logo_blue">Ed</span>
         </a>
-
     </header>
     
-    <form class="formulario" action="../index.html">
-
+    <form class="formulario" onsubmit="event.preventDefault(); registrarUsuario();">
         <h1>Registrarse</h1>
         
         <div class="contenedor">
-
             <div class="inputContenedor">
                 <img src="../imagenes/userLogo.png" alt="Usuario">
-                <input type="text" required placeholder="Nombre">
+                <input type="text" id="nombre" required placeholder="Nombre">
             </div>
 
             <div class="inputContenedor">
                 <img src="../imagenes/userLogo.png" alt="Usuario">
-                <input type="text" required placeholder="Apellido">
+                <input type="text" id="apellido" required placeholder="Apellido">
             </div>
 
             <div class="inputContenedor">
                 <img src="../imagenes/mailLogo.png" alt="Correo Electronico">
-                <input type="email" required placeholder="Correo Electronico">
+                <input type="email" id="email" required placeholder="Correo Electronico">
             </div>
 
             <div class="inputContenedor">
                 <img src="../imagenes/keyLogo.png" alt="Contraseña">
-                <input type="password" required placeholder="Contraseña">
+                <input type="password" id="password" required placeholder="Contraseña">
             </div>
 
             <input type="submit" value="Registrate" class="button">
-            
             <p>¿Ya tienes una cuenta? <a class="link" href="../index.html">Iniciar Sesión</a></p>
-
         </div>
-
     </form>
 
 </body>
-
+<script src="../scripts/adminUsuario.js"></script>
 </html>

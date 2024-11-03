@@ -6,42 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Estilos/index.css">
     <title>Login - CoursEd</title>
+    
 </head>
 <body>
 
     <header class="header">
-
         <span href="#" class="logo logo_desktop">
             <span class="logo_black">Cours</span><span class="logo_blue">Ed</span>
         </span>
-
     </header>
     
-    <form class="formulario" action="./Vistas/inicio.html">
-
+    <form class="formulario" onsubmit="event.preventDefault(); InicioSesion();">
         <h1>Login</h1>
         
         <div class="contenedor">
-
             <div class="inputContenedor">
                 <img src="../imagenes/mailLogo.png" alt="Correo Electronico">
-                <input type="email" required placeholder="Correo Electronico">
+                <input type="email" id="email" required placeholder="Correo Electronico">
             </div>
 
             <div class="inputContenedor">
                 <img src="../imagenes/keyLogo.png" alt="Contraseña">
-                <input type="password" required placeholder="Contraseña">
+                <input type="password" id="password" required placeholder="Contraseña">
             </div>
 
             <input type="submit" value="Ingresar" class="button">
-            
-            
             <p>¿No tienes cuenta? <a class="link" href="./Vistas/registroSesion.html">Registrarse</a></p>
             <p>¿Olvidaste tu contraseña? <a class="link" href="./Vistas/reestablecerContrasenia.html">Reestablecer Contraseña</a></p>
-
         </div>
-
     </form>
 
 </body>
+<script src="./scripts/adminUsuario.js"></script>
 </html>
