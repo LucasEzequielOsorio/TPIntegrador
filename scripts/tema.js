@@ -9,7 +9,7 @@ const header = `
         <input list="courses" name="course" id="course">
             <datalist id="courses">
                 <option value="Webserver Administration">
-                <option value="Seguridad Informatica">
+                <option value="Seguridad Informatica para todos">
                 <option value="Direccionamiento IP y Subredes Cisco">
                 <option value="Seguridad Informatica">
                 <option value="Ciberseguridad Todo en Uno">
@@ -56,18 +56,18 @@ const footer = `
 
 //mapear los nombres de los cursos a los archivos HTML de cursos correspondientes
 const cursosHTML = {
-    "Webserver Administration": "detallesCurso1.html",
-    "Seguridad Informatica para todos": "detallesCurso2.html",
-    "Direccionamiento IP y Subredes Cisco": "detallesCurso3.html",
-    "Seguridad Informatica": "detallesCurso4.html",
-    "Ciberseguridad Todo en Uno": "detallesCurso5.html",
-    "Seguridad Linux desde cero": "detallesCurso6.html",
-    "Desarrollo de software seguro": "detallesCurso7.html",
-    "Excel Completo": "detallesCurso8.html",
-    "Máster en SQL": "detallesCurso9.html",
-    "Programacion con Phyton": "detallesCurso10.html",
-    "Power BI": "detallesCurso11.html",
-    "Fundamentos de Cisco": "detallesCurso12.html"
+    "Webserver Administration": "detallesCurso.html?curso=1",
+    "Seguridad Informatica para todos": "detallesCurso.html?curso=2",
+    "Direccionamiento IP y Subredes Cisco": "detallesCurso.html?curso=3",
+    "Seguridad Informatica": "detallesCurso.html?curso=4",
+    "Ciberseguridad Todo en Uno": "detallesCurso.html?curso=5",
+    "Seguridad Linux desde cero": "detallesCurso.html?curso=6",
+    "Desarrollo de software seguro": "detallesCurso.html?curso=7",
+    "Excel Completo": "detallesCurso.html?curso=8",
+    "Máster en SQL": "detallesCurso.html?curso=9",
+    "Programacion con Phyton": "detallesCurso.html?curso=10",
+    "Power BI": "detallesCurso.html?curso=11",
+    "Fundamentos de Cisco": "detallesCurso.html?curso=12"
 };
 
 //buscar y redirigir al curso correspondiente
