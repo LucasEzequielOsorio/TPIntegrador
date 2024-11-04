@@ -43,7 +43,7 @@ function InicioSesion() {
     if (user) {
         localStorage.setItem("activeUser", JSON.stringify(user));
         alert("Inicio de sesión exitoso!");
-        window.location.href = "../Vistas/inicio.html";
+        window.location.href = "./Vistas/inicio.html";
     } else {
         alert("Mail o contraseña incorrectos");
     }

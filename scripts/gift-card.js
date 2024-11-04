@@ -47,9 +47,9 @@ function setTamanioTexto()
                 factor = 0.075;
             break;
         }
-        console.log(factor * nodoGiftCard.offsetHeight);
         nodoTextoGiftCard.style.fontSize = factor * nodoGiftCard.offsetHeight + "px";
         nodoNombreDestinatario.style.fontSize = "calc("+ nodoTextoGiftCard.style.fontSize + " * 2";
+        nodoMonto.querySelector("span").style.fontSize = 0.33 * nodoMonto.offsetHeight + "px";
 }
 var nodoInputMonto = document.querySelector("#gift_card_personalization_dashboard_amount");
 var nodoMonto = document.querySelector(".gift_card_preview_amount");

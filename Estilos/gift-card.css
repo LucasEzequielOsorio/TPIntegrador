@@ -135,7 +135,16 @@
     align-items: center;
     background-color: black;
     color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+.gift_card_preview_amount span
+{
+    display: block;
+    height: 33%;
+    font-size: 100%;
+}
+
 .gift_card_preview_center
 {
     grid-column: 2;
@@ -156,10 +165,6 @@
 }
 @media screen and (max-width: 480px)
 {
-    .gift_card_preview_amount
-    {
-        font-size: 0.5rem;
-    }
     .gift_card_preview_text
     {
         font-size: 1rem;

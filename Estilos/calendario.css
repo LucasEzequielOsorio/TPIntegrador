@@ -131,9 +131,14 @@
     border-radius: 50%;
     height: 2rem;
     width: 2rem;
+    cursor: pointer;
     border: 0px;
     color: white;
     background-color: red;
+}
+.pop_up_course_X:hover
+{
+    background-color: darkred;
 }
 .pop_up_course_title
 {
@@ -147,11 +152,16 @@
 {
     grid-area: more;
     color: white;
+    text-decoration: none;
     background-color: blue;
     border-radius: 1rem;
     padding: 1rem;
     width: fit-content;
     height: fit-content;
+}
+.pop_up_course_button:hover
+{
+    background-color: darkblue;
 }
 
 .calendar_item_course:hover
