@@ -22,6 +22,7 @@
 .gift_card_personalization_dashboard_input
 {
     height: 1.5rem;
+    width: 25%;
 }
 .gift_card_personalization_dashboard_radio_container
 {
@@ -183,7 +184,7 @@
     }
     .gift_card_preview_container
     {
-        width: 100vw;
+        width: 100%;
         background-color: white;
         position: sticky;
         top: 2rem;
@@ -195,7 +196,7 @@
     }
     .gift_card_personalization_dashboard
     {
-        width: 80vw;
+        width: 80%;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1039px)

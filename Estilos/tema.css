@@ -127,7 +127,6 @@ body *
     justify-content: space-around;
     align-items: top;
     margin-top: 2rem;
-    border-top: 1px solid lightgray;
 }
 .footer_item
 {   

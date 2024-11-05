@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 95%;
 }
 .calendar_title
 {
@@ -172,10 +172,10 @@
     text-overflow: inherit;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .calendar_container
     {
-        width: 98vw;
+        width: 95vw;
     }
     .calendar_item, .calendar_item_disabled
     {
@@ -193,12 +193,10 @@
         margin-bottom: 0.5rem;
         text-decoration: none;
         width: 100%;
-        white-space: inherit;
-        overflow: scroll;
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px){
+@media screen and (min-width: 768px) and (max-width: 1040px){
     .calendar_item_courses_container
     {
         font-size: 0.8rem;
@@ -211,7 +209,5 @@
         margin-bottom: 0.5rem;
         text-decoration: none;
         width: 100%;
-        white-space: inherit;
-        overflow: scroll;
     }
 }
