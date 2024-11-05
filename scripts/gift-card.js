@@ -49,10 +49,11 @@ function setTamanioTexto()
         }
         nodoTextoGiftCard.style.fontSize = factor * nodoGiftCard.offsetHeight + "px";
         nodoNombreDestinatario.style.fontSize = "calc("+ nodoTextoGiftCard.style.fontSize + " * 2";
-        nodoMonto.querySelector("span").style.fontSize = 0.33 * nodoMonto.offsetHeight + "px";
+        nodoMonto.querySelector(".span").style.fontSize = 0.33 * nodoMonto.offsetHeight + "px";
 }
 var nodoInputMonto = document.querySelector("#gift_card_personalization_dashboard_amount");
 var nodoMonto = document.querySelector(".gift_card_preview_amount");
+var ubicacion_monto ="UP_RIGHT";
 nodoInputMonto.addEventListener("input", (e)=>{
     if(nodoInputMonto.value == "")
         nodoMonto.textContent = "$0";
@@ -62,7 +63,8 @@ nodoInputMonto.addEventListener("input", (e)=>{
 var nodosInputUbicacionMonto = document.querySelectorAll(".amount_placement_option");
 nodosInputUbicacionMonto.forEach((nodo)=>{
     nodo.addEventListener("change", (e)=>{
-        switch(e.target.value)
+        ubicacion_monto = e.target.value;
+        switch(ubicacion_monto)
         {
             case "UP_LEFT":
                 nodoMonto.style.gridColumn = 1;
@@ -87,33 +89,32 @@ var nodosInputEstiloFondo = document.querySelectorAll(".background_style_option"
 nodosInputEstiloFondo.forEach((nodo)=>{
     nodo.addEventListener("change", setBackground);
 });
-
+var estilo_fondo = "SOLID";
 function setBackground()
 {
     console.log("LLAMANDO");
-    let estiloFondo;
     nodosInputEstiloFondo.forEach((nodo)=>{
         if(nodo.checked == true)
         {
-            estiloFondo = nodo.value;
+            estilo_fondo = nodo.value;
         }
     });
-    switch(estiloFondo)
+    switch(estilo_fondo)
     {
         case "SOLID":
-            console.log(backgroundColor + ", " + estiloFondo);
+            console.log(backgroundColor + ", " + estilo_fondo);
             nodoGiftCard.style.background = backgroundColor;
             break;
         case "LINEAR_GRADIENT":
-            console.log(backgroundColor + ", " + estiloFondo); 
+            console.log(backgroundColor + ", " + estilo_fondo); 
             nodoGiftCard.style.background = "linear-gradient(" + backgroundColor + ", black )";
             break;
         case "RADIAL_GRADIENT":
-            console.log(backgroundColor + ", " + estiloFondo);
+            console.log(backgroundColor + ", " + estilo_fondo);
             nodoGiftCard.style.background = "radial-gradient(" + backgroundColor + ", black)";
             break;
         case "STRIPED":
-            console.log(backgroundColor + ", " + estiloFondo);
+            console.log(backgroundColor + ", " + estilo_fondo);
             nodoGiftCard.style.background = "linear-gradient("+ backgroundColor +", 15%, black, 25%, "+ backgroundColor +", 45%, black, 55%, "+ backgroundColor +", 75%, black, 85%, "+ backgroundColor +")";            
     }
 }
@@ -123,6 +124,7 @@ var nodoEmailDestinatario = document.querySelector("#gift_card_personalization_d
 var nodoSubmit = document.querySelector(".submit_button");
 nodoSubmit.addEventListener("click", (e)=>{
     e.preventDefault();
+
     let userExists = false;
     JSON.parse(localStorage.getItem("users")).forEach((user)=>{
         if(user.email == nodoEmailDestinatario.value)
@@ -130,16 +132,21 @@ nodoSubmit.addEventListener("click", (e)=>{
             userExists = true;
         }
     });
+
     if(!userExists)
     {
         alert("No existe un usuario con ese correo electrónico.");
     }
     else
     {
-        //Este código está incompleto y no va a funcionar mientras no esté hecha la lógica del carrito.
-        /*let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-        carrito.push();
-        localStorage.setItem("carrito", JSON.stringify(carrito));*/
-        nodoForm.submit();
+
+        if(!nodoInputNombreDestinatario.value || !nodoEmailDestinatario.value || !backgroundColor || !text_size || !nodoInputMonto.value || !ubicacion_monto || !estilo_fondo)
+        {
+            alert("Por favor, rellene todos los campos.");
+        }
+        else
+        {
+            nodoForm.submit();
+        }
     }
 });
