@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../Estilos/tema.css">
     <link rel="stylesheet" href="../Estilos/Inscripcion.css">
     <title>Inscripción - CoursEd</title>
+
 </head>
 <body>
     <header id="header"></header>
@@ -19,32 +20,40 @@
             <h1>Nombre del Curso</h1>
             <h2>Inscripción</h2>
 
-            <div class="formularios-singular">
+            <div id="formularios-singular">
                 <div class="persona" data-index="1">
                 <input type="email" id="email" placeholder="Correo electrónico" required>
                 <input type="text"  id="name" placeholder="Nombre y Apellido" required>
                 <input type="number" id="dni" placeholder="DNI(sin puntos)" required min="1">
                 </div>
-                <!-- <button>-</button> -->
-                 <a class="botonEliminar" href="#">-</a>
+
                     
             </div>
 
             <div class="Agregar">
                 <h3>Agregar Persona</h3>
-                <a class="botonAgregar" href="#">+</a>
-                <!--<button>+</button>-->
+                <a id="btnAgregarPersona" href="#">+</a>
             </div>
 
-            <h3>$0000</h3>
+            <h3 id="total">Total: $ 0</h3>
             
-            <input type="submit" value="AGREGAR AL CARRITO" class="button">
+           
+            <button id="mostrarModal">CONTINUAR</button>
 
-        </form>
+        
+        <div id="modal-resumen" class="modal">
+            <h2>Resumen de Inscripción</h2>
+            <div id="lista-inscritos"></div>
+            <button id="btnCerrarModal">Cerrar</button>
+            <input type="submit" value="Ir al Carrito" id="btnAgregarCarrito">
+        </div>
+    </form>
+        
 
     </section>
     <footer id="footer"></footer>
     
 </body>
     <script src="../scripts/tema.js" defer></script>
+    <script src="../scripts/inscripcion.js" defer></script>
 </html>
