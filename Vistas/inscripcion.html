@@ -11,25 +11,23 @@
 <body>
     <header id="header"></header>
     <nav id="navbar_back_and_home"></nav>
+
+
     <section class="datos_inscripcion">
+
         <form class="datos" action="../Vistas/carrito.html">
             <h1>Nombre del Curso</h1>
             <h2>Inscripción</h2>
 
-
             <div class="formularios-singular">
-
-
-                <input type="email" name="email" required id="email" placeholder="Correo electrónico">
-
-
-                <input type="text" name="" required id="name" placeholder="Nombre y Apellido">
-
-
-                <input type="number" required id="dni" placeholder="DNI(sin puntos)" min="1">
-
+                <div class="persona" data-index="1">
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="text"  id="name" placeholder="Nombre y Apellido" required>
+                <input type="number" id="dni" placeholder="DNI(sin puntos)" required min="1">
+                </div>
                 <!-- <button>-</button> -->
                  <a class="botonEliminar" href="#">-</a>
+                    
             </div>
 
             <div class="Agregar">
