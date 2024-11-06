@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let cursos = Array.from(carrousel.children);
     let currentIndex = 0;
     let visibleCursos = 1;
-    const delay = 3000;
+    const delay = 2700;
 
     // Duplicar los elementos del carrusel para crear el efecto de desplazamiento continuo
     cursos.forEach(curso => {
