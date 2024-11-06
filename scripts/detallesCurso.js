@@ -546,4 +546,22 @@ function cargarCurso() {
 // Llama a la función de carga al iniciar la página
 window.onload = cargarCurso;
 
+// detallesCurso.js
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener el cursoId de la URL (por ejemplo: detallesCurso.html?curso=1)
+    const urlParams = new URLSearchParams(window.location.search);
+    const cursoId = urlParams.get('curso');
 
+    // Verificar si existe un cursoId
+    if (cursoId) {
+        // Actualizar el título del curso (opcional)
+        document.getElementById('tituloCurso').innerText = `Curso ${cursoId}`;
+
+        // Aquí puedes cargar el resto de los datos del curso dependiendo de cursoId
+        // Cargar dinámica los detalles (esto lo haces según tu lógica de carga de datos)
+
+        // Actualizar el href del botón "INSCRIBIRSE"
+        const inscribirBtn = document.getElementById('inscribirBtn');
+        inscribirBtn.href = `../Vistas/inscripcion.html?curso=${cursoId}`;
+    }
+});

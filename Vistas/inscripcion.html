@@ -7,53 +7,38 @@
     <link rel="stylesheet" href="../Estilos/tema.css">
     <link rel="stylesheet" href="../Estilos/Inscripcion.css">
     <title>Inscripción - CoursEd</title>
-
 </head>
 <body>
     <header id="header"></header>
     <nav id="navbar_back_and_home"></nav>
-
-
     <section class="datos_inscripcion">
-
         <form class="datos" action="../Vistas/carrito.html">
-            <h1>Nombre del Curso</h1>
+            <h1 id="nombreCurso">Nombre del Curso</h1>
             <h2>Inscripción</h2>
 
-            <div id="formularios-singular">
-                <div class="persona" data-index="1">
-                <input type="email" id="email" placeholder="Correo electrónico" required>
-                <input type="text"  id="name" placeholder="Nombre y Apellido" required>
-                <input type="number" id="dni" placeholder="DNI(sin puntos)" required min="1">
-                </div>
-
-                    
+            <!-- Información del curso -->
+            <div class="formularios-singular">
+                <input type="email" name="email" required id="email" placeholder="Correo electrónico">
+                <input type="text" name="" required id="name" placeholder="Nombre y Apellido">
+                <input type="number" required id="dni" placeholder="DNI(sin puntos)" min="1">
+                <input type="number" required id="telefono" placeholder="Telefono" min="1">
+                <a class="botonEliminar" href="#">-</a>
             </div>
 
             <div class="Agregar">
                 <h3>Agregar Persona</h3>
-                <a id="btnAgregarPersona" href="#">+</a>
+                <a class="botonAgregar" href="#">+</a>
             </div>
 
-            <h3 id="total">Total: $ 0</h3>
+            <h3 id="montoTotal">$0000</h3>
             
-           
-            <button id="mostrarModal">CONTINUAR</button>
-
-        
-        <div id="modal-resumen" class="modal">
-            <h2>Resumen de Inscripción</h2>
-            <div id="lista-inscritos"></div>
-            <button id="btnCerrarModal">Cerrar</button>
-            <input type="submit" value="Ir al Carrito" id="btnAgregarCarrito">
-        </div>
-    </form>
-        
-
+            <input type="submit" value="AGREGAR AL CARRITO" class="button">
+        </form>
     </section>
     <footer id="footer"></footer>
     
-</body>
+    <script type="module" src="../scripts/inscripcion.js" defer></script>
     <script src="../scripts/tema.js" defer></script>
-    <script src="../scripts/inscripcion.js" defer></script>
+</body>
 </html>
+

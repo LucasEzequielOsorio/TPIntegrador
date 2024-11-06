@@ -25,7 +25,7 @@
     padding: 2%;
 }
 .formularios-singular input{
-    width: 30%;
+    width: 20%;
     border-radius: 0.4em;
     border: 3px solid lightgray;
 
@@ -67,25 +67,8 @@
     margin-left: 0.3rem;
 }
 
-.modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            background-color: white;
-            border: 1px solid #ccc;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-            border-radius: 1em;
-        }
-        .modal.active {
-            display: block;
-        }
 
-.persona{
-    padding-top: 1%;
-}
+
 /* -------------------------------------------------------------- */
 
 /* Media Queries */

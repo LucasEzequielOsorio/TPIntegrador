@@ -1,102 +1,122 @@
-//me falta hacer que redireccionen bien los botones y los valores de los cursos sean los correctos y poder cargarlo bien en el carrito
-    let contador = 1;
-    const precioPorPersona = 20; //Aca hay que poner bien el valor del curso en especifico
-// Limpiar el localStorage y los inputs vacíos al cargar la página
-document.addEventListener("DOMContentLoaded", () => {
-
-localStorage.removeItem("personas"); // Esto elimina todos los datos guardados en localStorage
-eliminarInputsVacios();
-
-});
-function eliminarInputsVacios() {
-    const contenedor = document.getElementById('formularios-singular');
-    const inputs = contenedor.querySelectorAll('input');
+document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const cursoId = urlParams.get('curso');
     
-    // Recorre todos los inputs y elimina aquellos que estén vacíos
-    inputs.forEach(input => {
-        if (input.value === '') {
-            input.remove();  // Elimina el input vacío
+    // Asegurarse de que haya un cursoId en la URL
+    if (cursoId) {
+        const cursos = [
+            { id: 1, nombre: 'Webserver Administration', precio: 125000, modalidad: 'Virtual' },
+            { id: 2, nombre: 'Seguridad Informatica para todos', precio: 120000, modalidad: 'Presencial' },
+            { id: 3, nombre: 'Direccionamiento IP y Subredes Cisco', precio: 150000, modalidad: 'Presencial' },
+            { id: 4, nombre: 'Seguridad Informatica', precio: 48000, modalidad: 'Virtual' },
+            { id: 5, nombre: 'Ciberseguridad Todo en Uno', precio: 80000, modalidad: 'Virtual' },
+            { id: 6, nombre: 'Seguridad Linux desde cero', precio: 78000, modalidad: 'Presencial' },
+            { id: 7, nombre: 'Desarrollo de software seguro', precio: 140000, modalidad: 'Presencial' },
+            { id: 8, nombre: 'Excel Completo', precio: 80000, modalidad: 'Presencial' },
+            { id: 9, nombre: 'Máster en SQL', precio: 120000, modalidad: 'Virtual' },
+            { id: 10, nombre: 'Programacion con Phyton', precio: 150000, modalidad: 'Virtual' },
+            { id: 11, nombre: 'Power BI', precio: 170000, modalidad: 'Virtual' },
+            { id: 12, nombre: 'Fundamentos de Cisco', precio: 200000, modalidad: 'Virtual' },
+        ];
+        
+        // Buscar el curso correspondiente
+        const curso = cursos.find(curso => curso.id === parseInt(cursoId));
+        
+        if (curso) {
+            // Mostrar el nombre del curso y el precio
+            document.getElementById('nombreCurso').innerText = curso.nombre;
+            document.getElementById('montoTotal').innerText = `$${curso.precio.toLocaleString()}`;
+
+            // Manejar el botón de agregar persona
+            const agregarBtn = document.querySelector('.botonAgregar');
+            agregarBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                agregarPersona(curso);
+            });
         }
-    });
-}
-
-    // Cargar datos de localStorage al iniciar
-    document.addEventListener("DOMContentLoaded", () => {
-        const personasGuardadas = JSON.parse(localStorage.getItem("personas")) || [];
-        if (personasGuardadas.length > 0) {
-            personasGuardadas.forEach(persona => agregarPersona(persona));
-        }
-        actualizarTotal();
-    });
-
-    document.getElementById("btnAgregarPersona").addEventListener("click", () => agregarPersona());
-    document.getElementById("mostrarModal").addEventListener("click", mostrarResumen);
-    document.getElementById("btnCerrarModal").addEventListener("click", cerrarModal);
-
-        function agregarPersona() {
-            contador++;
-            const container = document.getElementById('formularios-singular');
-        
-            // Crear un nuevo div para la persona con inputs vacíos
-            const nuevaPersona = document.createElement('div');
-            nuevaPersona.classList.add('persona');
-            nuevaPersona.setAttribute('data-index', contador);
-        
-            // Crear los inputs vacíos (sin valores asignados)
-            nuevaPersona.innerHTML = `
-                <input type="text" placeholder="Nombre y Apellido" required>
-                <input type="number" placeholder="DNI (sin puntos)" required min="1">
-                <input type="email" placeholder="Correo electrónico" required>
-                <a class="btnEliminar" href="#">-</a>
-            `;
-        
-            // Agregar el formulario al contenedor
-            container.appendChild(nuevaPersona);
-        
-            // Agregar listener al botón eliminar para que elimine solo los inputs de esta persona
-            nuevaPersona.querySelector('.btnEliminar').addEventListener("click", eliminarPersona);
-        
-            // Actualizar el total después de agregar la nueva persona
-            actualizarTotal();
-        }
-
-   // Función para eliminar la persona (inputs) cuando se hace clic en el botón de eliminar
-function eliminarPersona(event) {
-    // Encuentra el contenedor más cercano que es la persona (el div .persona)
-    const persona = event.target.closest('.persona');
-    
-    if (persona) {
-        // Elimina todos los inputs dentro de la persona
-        persona.remove();  // Elimina el contenedor de la persona completa
-        actualizarTotal();  // Actualiza el total de personas
-    }
-}
-
-
-
-    function actualizarTotal() {
-        //Aca hay que poner bien el valor del curso en especifico
-        const totalPersonas = document.querySelectorAll('.persona').length;
-        document.getElementById('total').textContent = `Total: U$D ${totalPersonas * precioPorPersona}`;
     }
 
-    function mostrarResumen() {
-        
-        const modal = document.getElementById('modal-resumen');
-        const listaInscritos = document.getElementById('lista-inscritos');
-        listaInscritos.innerHTML = ''; // Limpiar contenido previo
+    let contadorPersonas = 1;  // Contador para las personas registradas
 
-        const personasGuardadas = JSON.parse(localStorage.getItem("personas")) || [];
-        personasGuardadas.forEach((persona, index) => {
-            const infoPersona = document.createElement('p');
-            infoPersona.textContent = `Persona ${index + 1}: ${persona.nombre}, DNI: ${persona.dni}, Tel: ${persona.telefono}`;
-            listaInscritos.appendChild(infoPersona);
+    // Función para agregar una persona
+    function agregarPersona(curso) {
+        const formularioContainer = document.querySelector('.datos');
+        
+        // Crear los nuevos campos para la persona
+        const nuevaPersona = document.createElement('div');
+        nuevaPersona.classList.add('formularios-singular');
+        nuevaPersona.innerHTML = `
+            <input type="email" name="email" required id="email_${contadorPersonas}" placeholder="Correo electrónico">
+            <input type="text" required id="name_${contadorPersonas}" placeholder="Nombre y Apellido">
+            <input type="number" required id="dni_${contadorPersonas}" placeholder="DNI(sin puntos)" min="1">
+            <input type="number" required id="telefono_${contadorPersonas}" placeholder="Telefono" min="1">
+            <a class="botonEliminar" href="#" data-persona="${contadorPersonas}">-</a>
+        `;
+
+        // Agregar el nuevo formulario al contenedor
+        formularioContainer.insertBefore(nuevaPersona, document.querySelector('.Agregar'));
+
+        // Actualizar el monto total
+        actualizarMonto(curso, ++contadorPersonas);
+
+        // Agregar funcionalidad de eliminar a las nuevas personas
+        const eliminarBtn = nuevaPersona.querySelector('.botonEliminar');
+        eliminarBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            eliminarPersona(e.target, curso);
         });
-
-        modal.classList.add('active');
     }
 
-    function cerrarModal() {
-        const modal = document.getElementById('modal-resumen');
-        modal.classList.remove('active');
+    // Función para actualizar el monto
+    function actualizarMonto(curso, cantidadPersonas) {
+        let total = curso.precio * cantidadPersonas;
+        document.getElementById('montoTotal').innerText = `$${total.toLocaleString()}`;
     }
+
+    // Función para eliminar persona
+    function eliminarPersona(eliminarBtn, curso) {
+        const personaId = eliminarBtn.getAttribute('data-persona');
+        
+        if (personaId == 0) {
+            // Si es la primera persona, solo vaciar los campos
+            document.getElementById(`email_${personaId}`).value = '';
+            document.getElementById(`name_${personaId}`).value = '';
+            document.getElementById(`dni_${personaId}`).value = '';
+            document.getElementById(`telefono_${personaId}`).value = '';
+        } else {
+            // Eliminar el formulario de la persona
+            const personaFormulario = document.querySelector(`#email_${personaId}`).parentElement;
+            personaFormulario.remove();
+
+            // Restar el precio del curso
+            contadorPersonas--;
+            actualizarMonto(curso, contadorPersonas);
+        }
+    }
+
+    // Función para inicializar la primera persona (que no se debe eliminar)
+    function inicializarPrimerPersona() {
+        const formularioContainer = document.querySelector('.datos');
+        const primeraPersona = document.querySelector('.formularios-singular');
+        
+        // Asignar un id a la primera persona
+        primeraPersona.id = 'persona_0';
+        
+        // Establecer evento para limpiar los campos de la primera persona
+        const botonEliminar = primeraPersona.querySelector('.botonEliminar');
+        botonEliminar.addEventListener('click', function (e) {
+            e.preventDefault();
+            // Vaciar los campos de la primera persona, no eliminar el formulario
+            document.getElementById('email').value = '';
+            document.getElementById('name').value = '';
+            document.getElementById('dni').value = '';
+            document.getElementById('telefono').value = '';
+        });
+    }
+
+    // Llamar a la función para inicializar la primera persona
+    inicializarPrimerPersona();
+});
+
+
+
