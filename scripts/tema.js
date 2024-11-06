@@ -23,7 +23,7 @@ const header = `
             </datalist>
         <button type="submit">Buscar</button>
     </form>
-    <a href="../Vistas/carrito.html" class="cart_logo"><span>0</span></a>`;
+    <a href="../Vistas/carrito.html" class="cart_logo"><span id="contador_cursos_carrito">0</span></a>`;
 const footer = `
     <div class="footer_item">
         <h4>EL GRUPO</h4>
@@ -102,6 +102,15 @@ const navbar_back_and_home = `
 if(document.getElementById("header") != null)
 {    
     document.getElementById("header").innerHTML = header;
+    if(!localStorage.getItem("carrito"))
+    {
+        document.querySelector("#contador_cursos_carrito").textContent = 0;
+    }
+    else
+    {
+        document.querySelector("#contador_cursos_carrito").textContent = JSON.parse(localStorage.getItem("carrito")).length;
+
+    }
 }    
 if(document.getElementById("navbar_home") != null)
 {

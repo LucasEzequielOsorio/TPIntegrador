@@ -36,21 +36,6 @@
 {
     font-size: 2rem;
 }
-.calendar_nav
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.calendar_nav_button
-{
-    text-decoration: none;
-    color: gray;
-    border-radius: 1rem;
-    border: 1px solid gray;
-    padding: 0.5rem;
-    margin: 0 1rem;
-}
 .calendar_container
 {
     display: grid;
