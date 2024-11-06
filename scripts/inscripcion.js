@@ -1,6 +1,6 @@
 //me falta hacer que redireccionen bien los botones y los valores de los cursos sean los correctos y poder cargarlo bien en el carrito
     let contador = 1;
-    const precioPorPersona = 20; //Aca hay que poner bien el valor del curso en especifico
+    const precioPorPersona = localStorage.getItem('valorCursoEnNumero'); //Busca la variable guardada en localstorage que contiene el valor del curso
 // Limpiar el localStorage y los inputs vacíos al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
 
