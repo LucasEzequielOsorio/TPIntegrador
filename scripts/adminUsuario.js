@@ -4,6 +4,9 @@ function registrarUsuario() {
     const apellido = document.getElementById("apellido").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    const carrito = [];
+    const cursos = [];
+    const gift_cards = [];
 
     if (!nombre || !apellido || !email || !password) {
         alert("Todos los campos son obligatorios.");
@@ -16,7 +19,7 @@ function registrarUsuario() {
         return;
     }
 
-    const user = { nombre, apellido, email, password };
+    const user = { nombre, apellido, email, password, carrito, cursos, gift_cards };
     users.push(user);
     localStorage.setItem("users", JSON.stringify(users));
     alert("Registro exitoso! Puede iniciar sesión!");
@@ -70,6 +73,8 @@ function mostrarPerfil() {
         document.getElementById("nombre").textContent = activeUser.nombre;
         document.getElementById("apellido").textContent = activeUser.apellido;
         document.getElementById("email").textContent = activeUser.email;
+        document.querySelector("#cantidad_cursos").textContent = activeUser.cursos.length;
+        document.querySelector("#cantidad_gift_cards").textContent = activeUser.gift_cards.length;
     } else {
         alert("Usted no ha iniciado sesión");
         window.location.href = "../index.html";
@@ -110,5 +115,14 @@ function reestablecerPass() {
 
     alert("Contraseña reestablecida exitosamente.");
     window.location.href = "../index.html";
+}
+
+function cargarActiveUserAUsers()
+{
+    const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+    var users = JSON.parse(localStorage.getItem("users"));
+    var userIndex = users.findIndex(user => user.email === activeUser.email);
+    users[userIndex] = activeUser;
+    localStorage.setItem("users", JSON.stringify(users));
 }
 

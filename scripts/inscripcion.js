@@ -129,9 +129,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Función para agregar producto al carrito en localStorage
     function agregarProductoACarrito(nombre, precio, modalidad, cantidad) {
-        const productos = JSON.parse(localStorage.getItem("carrito")) || [];
+        const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+        const productos = activeUser.carrito || [];
         productos.push({ nombre, precio, modalidad, cantidad });
-        localStorage.setItem("carrito", JSON.stringify(productos));
+        activeUser.carrito = productos;
+        localStorage.setItem("activeUser", JSON.stringify(activeUser));
+        cargarActiveUserAUsers();
     }
 
     // Función para validar los campos
@@ -163,5 +166,12 @@ document.addEventListener("DOMContentLoaded", function () {
     inicializarPrimerPersona();
 });
 
-
+function cargarActiveUserAUsers()
+{
+    const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+    var users = JSON.parse(localStorage.getItem("users"));
+    var userIndex = users.findIndex(user => user.email === activeUser.email);
+    users[userIndex] = activeUser;
+    localStorage.setItem("users", JSON.stringify(users));
+}
 

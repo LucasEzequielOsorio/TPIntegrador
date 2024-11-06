@@ -102,13 +102,13 @@ const navbar_back_and_home = `
 if(document.getElementById("header") != null)
 {    
     document.getElementById("header").innerHTML = header;
-    if(!localStorage.getItem("carrito"))
+    if(!localStorage.getItem("activeUser"))
     {
         document.querySelector("#contador_cursos_carrito").textContent = 0;
     }
     else
     {
-        document.querySelector("#contador_cursos_carrito").textContent = JSON.parse(localStorage.getItem("carrito")).length;
+        document.querySelector("#contador_cursos_carrito").textContent = JSON.parse(localStorage.getItem("activeUser")).carrito.length;
 
     }
 }    

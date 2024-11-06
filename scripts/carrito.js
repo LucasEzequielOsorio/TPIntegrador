@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function cargarCarrito() {
     const filasCarrito = document.getElementById("filasCarrito");
-    const productos = JSON.parse(localStorage.getItem("carrito")) || [];
+    const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+    const productos = activeUser.carrito;
     
     filasCarrito.innerHTML = ""; // Limpiar el contenedor antes de cargar
 
@@ -28,22 +29,26 @@ function cargarCarrito() {
 }
 
 function agregarProducto(nombre, precio, modalidad, cantidad = 1) {
-    const productos = JSON.parse(localStorage.getItem("carrito")) || [];
+    const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+    const productos = activeUser.carrito;
     productos.push({ nombre, precio, modalidad, cantidad });
-    localStorage.setItem("carrito", JSON.stringify(productos));
+    localStorage.setItem("activeUser", JSON.stringify(activeUser));
     cargarCarrito();
 }
 
 function eliminarProducto(index) {
-    const productos = JSON.parse(localStorage.getItem("carrito")) || [];
+    const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+    const productos = activeUser.carrito;
     productos.splice(index, 1);
-    localStorage.setItem("carrito", JSON.stringify(productos));
+    localStorage.setItem("activeUser", JSON.stringify(activeUser));
+    cargarActiveUserAUsers();
     cargarCarrito();
 }
 
 function actualizarTotal() {
     let total = 0;
-    const productos = JSON.parse(localStorage.getItem("carrito")) || [];
+    const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+    const productos = activeUser.carrito;
 
     productos.forEach(producto => {
         total += producto.precio * producto.cantidad;
@@ -53,4 +58,13 @@ function actualizarTotal() {
     if (totalElemento) {
         totalElemento.textContent = `$${total.toLocaleString("es-AR")} ARS`;
     }
+}
+
+function cargarActiveUserAUsers()
+{
+    const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+    var users = JSON.parse(localStorage.getItem("users"));
+    var userIndex = users.findIndex(user => user.email === activeUser.email);
+    users[userIndex] = activeUser;
+    localStorage.setItem("users", JSON.stringify(users));
 }
