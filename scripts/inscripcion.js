@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 localStorage.removeItem("personas"); // Esto elimina todos los datos guardados en localStorage
 eliminarInputsVacios();
+    agregarPersona();
 
 });
 function eliminarInputsVacios() {
