@@ -541,6 +541,11 @@ function cargarCurso() {
         unidadElem.appendChild(contenido);
         contenidos.appendChild(unidadElem);
     });
+     //deja guardado en el localStorage el valor del curso para que despues se use en la Inscripcion
+    const valor = document.getElementById('valorCurso').innerText.replace(/\D/g, '');
+    if (element) {
+        localStorage.setItem('valorCursoEnNumero', valor);
+    }
 }
 
 // Llama a la función de carga al iniciar la página
