@@ -33,6 +33,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 e.preventDefault();
                 agregarPersona(curso);
             });
+
+            const submitBtn = document.querySelector('.datos input[type="submit"]');
+            submitBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                // Verificar si todos los campos están completos antes de agregar al carrito
+                if (validarCampos()) {
+                    agregarProductoACarrito(curso.nombre, curso.precio, curso.modalidad, contadorPersonas);
+                    window.location.href = "../Vistas/carrito.html";
+                } else {
+                    alert("Por favor complete todos los campos antes de continuar.");
+                }
+            });
         }
     }
 
@@ -112,6 +125,38 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('dni').value = '';
             document.getElementById('telefono').value = '';
         });
+    }
+
+    // Función para agregar producto al carrito en localStorage
+    function agregarProductoACarrito(nombre, precio, modalidad, cantidad) {
+        const productos = JSON.parse(localStorage.getItem("carrito")) || [];
+        productos.push({ nombre, precio, modalidad, cantidad });
+        localStorage.setItem("carrito", JSON.stringify(productos));
+    }
+
+    // Función para validar los campos
+    function validarCampos() {
+        // Verificar si todos los campos de la primera persona están completos
+        const primerPersonaCampos = ['email', 'name', 'dni', 'telefono'];
+        for (const campo of primerPersonaCampos) {
+            const input = document.getElementById(campo);
+            if (!input || !input.value.trim()) {
+                return false;
+            }
+        }
+
+        // Verificar los campos de las demás personas agregadas
+        for (let i = 1; i < contadorPersonas; i++) {
+            const campos = [`email_${i}`, `name_${i}`, `dni_${i}`, `telefono_${i}`];
+            for (const campo of campos) {
+                const input = document.getElementById(campo);
+                if (!input || !input.value.trim()) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 
     // Llamar a la función para inicializar la primera persona

@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../imagenes/iconoPestania.ico">
     <link rel="stylesheet" href="../estilos/tema.css">
     <link rel="stylesheet" href="../Estilos/carrito.css">
     <title>Carrito - CoursEd</title>
-
 </head>
 <body class="body">
     <header id="header"></header>
@@ -21,69 +19,37 @@
     <section class="contenedorCarritoGeneral">
         <div class="contenedorCarrito">
 
-            
+            <!-- Header de columnas -->
             <div class="subtituloCarrito">
-                <span class="datoCarrito uno">Producto</span>
-                <span class="datoCarrito uno">Precio</span>
-                <span class="datoCarrito uno">Cantidad</span>
-                <span class="datoCarrito uno">Subtotal</span>
-                <span class="datoCarrito uno"></span>
+                <span class="datoCarrito">Producto</span>
+                <span class="datoCarrito">Modalidad</span>
+                <span class="datoCarrito">Precio</span>
+                <span class="datoCarrito">Cantidad</span>
+                <span class="datoCarrito">Subtotal</span>
+                <span class="datoCarrito"></span>
             </div>
 
-            
-            <div class="filaCarrito">
-                <span class="nombreCurso">Máster en SQL</span>
-                <span class="datoCarrito">$120.000 ARS</span>
-                <div class="datoCarrito">
-                    <input class="cantInp" type="number" value="1" min="1">
-                </div>
-                <span class="datoCarrito">$120.000 ARS</span>
-                <div class="datoCarrito">
-                    <button class="btnBorrarFila">🗑️</button>
-                </div>
-            </div>
+            <!-- Contenedor para las filas de productos -->
+            <div id="filasCarrito"></div>
 
-            <div class="filaCarrito">
-                <span class="nombreCurso">Ciberseguridad Todo en uno</span>
-                <span class="datoCarrito">$80.000 ARS</span>
-                <div class="datoCarrito">
-                    <input type="number" value="1" min="1">
-                </div>
-                <span class="datoCarrito">$80.000 ARS</span>
-                <div class="datoCarrito">
-                    <button class="btnBorrarFila">🗑️</button>
-                </div>
-            </div>
-
-            <div class="filaCarrito">
-                <span class="nombreCurso">Seguridad Linux</span>
-                <span class="datoCarrito">$140.000 ARS</span>
-                <div class="datoCarrito">
-                    <input type="number" value="1" min="1">
-                </div>
-                <span class="datoCarrito">$140.000 ARS</span>
-                <div class="datoCarrito">
-                    <button class="btnBorrarFila">🗑️</button>
-                </div>
-            </div>
-
-            
+            <!-- Total y botones de acción -->
             <div class="btnsAccionCarrito">
-                <a href="../Vistas/inicio.html"> <button class="btnContinuarComprando">SEGUIR COMPRANDO</button> </a>
+                <a href="../Vistas/inicio.html">
+                    <button class="btnContinuarComprando">SEGUIR COMPRANDO</button>
+                </a>
                 <div class="totalCompraCarrito">
                     <span>Total:</span>
-                    <span>$340.000 ARS</span>
+                    <span>$0 ARS</span>
                 </div>
-                <a href="../Vistas/metodoPagoCurso.html"> <button class="btnContinuarPago">CONTINUAR PAGO</button> </a>
+                <a href="../Vistas/metodoPagoCurso.html">
+                    <button class="btnContinuarPago">CONTINUAR PAGO</button>
+                </a>
             </div>
-
         </div>
-        
     </section>
-
 
     <footer id="footer"></footer>
 </body>
 <script src="../scripts/tema.js"></script>
-
+<script src="../scripts/carrito.js"></script>
 </html>
