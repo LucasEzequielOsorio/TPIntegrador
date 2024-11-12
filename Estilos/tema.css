@@ -23,7 +23,6 @@ body *
 {
     z-index: 0;
 }
-
 .logo
 {
     padding: 0.5rem;
@@ -73,7 +72,8 @@ body *
 .cart_logo
 {
     background: no-repeat center url(../imagenes/carrito.png);
-    background-size: contain;
+    background-size: 80%;
+    border-radius: 1rem;
     grid-column: 3;
     justify-self: right;
     align-self: center;
@@ -84,6 +84,12 @@ body *
     height: 2rem;
     color: white;
     text-decoration: none;
+    padding: 0;
+    border: 0;
+}
+.cart_logo:hover
+{
+    background-color: lightgray;
 }
 .cart_logo span
 {
@@ -91,6 +97,75 @@ body *
     padding: 0.25rem;
     background-color: red;
     border-radius: 1rem;
+}
+#cart_sidebar
+{
+    display: none;
+    border-left: 1px solid lightgray;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas:"X empty empty"
+                        "empty-2 content empty-3"
+                        "empty-2 empty-4 empty-3";
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 40vw;
+    background-color: whitesmoke;
+}
+#close_sidebar_button
+{
+    grid-area: X;
+    border: 0;
+    background-color: red;
+    color: white;
+}
+#close_sidebar_button:hover
+{
+    background-color: darkred;
+    color: lightgray;
+}
+.empty_cart_text
+{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.empty_cart_text, .contenedorCarrito
+{
+    display: none;
+    grid-area: content;
+}
+.subtituloCarrito {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #d3d3d3;
+    color: #000;
+    font-weight: bold;
+}
+.filaCarrito {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #fff;
+    color: #000;
+    border-bottom: 2px solid #d3d3d3;
+}
+.btnsAccionCarrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.btnContinuarPago {
+    background-color: #2164d6;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
 }
 #navbar_back_and_home
 {

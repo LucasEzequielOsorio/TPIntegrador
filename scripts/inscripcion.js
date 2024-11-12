@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Verificar si todos los campos están completos antes de agregar al carrito
                 if (validarCampos()) {
                     agregarProductoACarrito(curso.nombre, curso.precio, curso.modalidad, contadorPersonas);
-                    window.location.href = "../Vistas/carrito.html";
+                    abrirSidebar();
                 } else {
                     alert("Por favor complete todos los campos antes de continuar.");
                 }

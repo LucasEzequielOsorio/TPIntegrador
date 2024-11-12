@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     cargarCursosDeCarritoAPerfil();
+    contarCursos();
 });
-
 function cargarCursosDeCarritoAPerfil()
 {
     const activeUser = JSON.parse(localStorage.getItem("activeUser"));
@@ -14,8 +14,6 @@ function cargarCursosDeCarritoAPerfil()
     localStorage.setItem("activeUser", JSON.stringify(activeUser));
     cargarActiveUserAUsers();
 }
-
-
 function cargarActiveUserAUsers()
 {
     const activeUser = JSON.parse(localStorage.getItem("activeUser"));
