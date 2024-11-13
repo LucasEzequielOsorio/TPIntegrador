@@ -39,6 +39,19 @@ body {
     border: 1px solid lightgray;
     border-radius: 1rem;
 }
+.modal button
+{
+    border: 0;
+    border-radius: 0.75rem;
+    color: white;
+    background-color: blue;
+    padding: 0.5rem;
+}
+.modal button:hover
+{
+    background-color: darkblue;
+    color: lightgray;
+}
 .inputContenedor img {
     width: 1rem;
 }
