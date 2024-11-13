@@ -9,4 +9,3 @@ const fondo = urlParams.get('background');
 
 const gift_card = {nombreDestinatario, emailDestinatario, color, tamanioTexto, monto, ubicacionMonto, fondo};
 localStorage.setItem("gift-card", JSON.stringify(gift_card));
-alert(localStorage.getItem("gift-card"));

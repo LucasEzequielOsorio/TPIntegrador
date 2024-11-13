@@ -135,14 +135,14 @@ nodoSubmit.addEventListener("click", (e)=>{
 
     if(!userExists)
     {
-        alert("No existe un usuario con ese correo electrónico.");
+        openModal("#usuario_no_encontrado");
     }
     else
     {
 
         if(!nodoInputNombreDestinatario.value || !nodoEmailDestinatario.value || !backgroundColor || !text_size || !nodoInputMonto.value || !ubicacion_monto || !estilo_fondo)
         {
-            alert("Por favor, rellene todos los campos.");
+            openModal("#datos_son_obligatorios");
         }
         else
         {

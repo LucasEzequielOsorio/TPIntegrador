@@ -191,6 +191,11 @@ body *
 {
     background-color: lightgray;
 }
+.modal
+{
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+}
 #footer
 {   
     background-color: black;

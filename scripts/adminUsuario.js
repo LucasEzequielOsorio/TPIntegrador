@@ -9,21 +9,20 @@ function registrarUsuario() {
     const gift_cards = [];
 
     if (!nombre || !apellido || !email || !password) {
-        alert("Todos los campos son obligatorios.");
+        openModal("#datos_son_obligatorios");
         return;
     }
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
     if (users.find(user => user.email === email)) {
-        alert("Este correo ya se encuentra registrado.");
+        openModal("#correo_ya_registrado");
         return;
     }
 
     const user = { nombre, apellido, email, password, carrito, cursos, gift_cards };
     users.push(user);
     localStorage.setItem("users", JSON.stringify(users));
-    alert("Registro exitoso! Puede iniciar sesión!");
-    window.location.href = "../index.html";
+    openModal("#registro_exitoso");
 }
 
 // Función para el inicio de sesión
@@ -37,7 +36,7 @@ function InicioSesion() {
     //valida si la cuenta ya esta creada
     const userExitente = users.find(user => user.email === email);
     if (!userExitente) {
-        alert("Este usuario no se encuentra registrado. Debe registrarse!");
+        openModal("#usuario_no_registrado");
         return;
     }
 
@@ -45,10 +44,9 @@ function InicioSesion() {
 
     if (user) {
         localStorage.setItem("activeUser", JSON.stringify(user));
-        alert("Inicio de sesión exitoso!");
         window.location.href = "./Vistas/inicio.html";
     } else {
-        alert("Mail o contraseña incorrectos");
+        openModal("#datos_incorrectos_login");
     }
 }
 
@@ -61,8 +59,7 @@ function eliminarCuenta() {
         users = users.filter(user => user.email !== activeUser.email);
         localStorage.setItem("users", JSON.stringify(users));
         localStorage.removeItem("activeUser");
-        alert("Cuenta eliminada.");
-        window.location.href = "../index.html";
+        openModal("#cuenta_eliminada");
     }
 }
 
@@ -76,8 +73,7 @@ function mostrarPerfil() {
         document.querySelector("#cantidad_cursos").textContent = activeUser.cursos.length;
         document.querySelector("#cantidad_gift_cards").textContent = activeUser.gift_cards.length;
     } else {
-        alert("Usted no ha iniciado sesión");
-        window.location.href = "../index.html";
+        openModal("#sesion_no_iniciada");
     }
 }
 
@@ -92,20 +88,20 @@ function reestablecerPass() {
 
     // Verificar si todos los campos están completos
     if (!email || !password || !confirmPassword) {
-        alert("Todos los campos son obligatorios.");
+        openModal("#datos_son_obligatorios");
         return;
     }
 
     // Verificar que las contraseñas coincidan
     if (password !== confirmPassword) {
-        alert("Las contraseñas no coinciden.");
+        openModal("#contrasenias_no_coinciden");
         return;
     }
 
     // Verificar si el correo electrónico está registrado
     const userIndex = users.findIndex(user => user.email === email);
     if (userIndex === -1) {
-        alert("Este usuario no se encuentra registrado. Debe registrarse!");
+        openModal("#usuario_no_registrado");
         return;
     }
 
@@ -113,8 +109,7 @@ function reestablecerPass() {
     users[userIndex].password = password;
     localStorage.setItem("users", JSON.stringify(users));
 
-    alert("Contraseña reestablecida exitosamente.");
-    window.location.href = "../index.html";
+    openModal("#contrasenia_restablecida");
 }
 
 function cargarActiveUserAUsers()
@@ -126,3 +121,14 @@ function cargarActiveUserAUsers()
     localStorage.setItem("users", JSON.stringify(users));
 }
 
+const openModal = (modalId) =>
+{
+    let modal = document.querySelector(modalId);
+    modal.showModal(); 
+}
+    
+const closeModal = (modalId) =>
+{
+    let modal = document.querySelector(modalId);
+    modal.close(); 
+}

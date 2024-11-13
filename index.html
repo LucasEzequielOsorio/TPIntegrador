@@ -35,7 +35,15 @@
             <p>¿Olvidaste tu contraseña? <a class="link" href="./Vistas/reestablecerContrasenia.html">Reestablecer Contraseña</a></p>
         </div>
     </form>
-
+    <dialog class="modal" id="usuario_no_registrado">
+        <p>Este usuario no se encuentra registrado. Debe registrarse!</p>
+        <button type="button" onclick="closeModal('#usuario_no_registrado')">Cerrar</button>
+        <button type="button" onclick="window.location.href = './vistas/registroSesion.html'">Ir a registrarme</button>
+    </dialog>
+    <dialog class="modal" id="datos_incorrectos_login">
+        <p>Mail o contraseña incorrectos.</p>
+        <button type="button" onclick="closeModal('#datos_incorrectos_login')">Cerrar</button>
+    </dialog>
 </body>
 <script src="./scripts/adminUsuario.js"></script>
 </html>

@@ -27,7 +27,15 @@
             <button class="button" onclick="eliminarCuenta()">Eliminar cuenta</button>
         </div>
     </div>
-
+    <dialog class="modal" id="cuenta_eliminada">
+        <p>Cuenta eliminada correctamente.</p>
+        <button type="button" onclick="window.location.href = '../index.html'">Volver a login.</button>
+    </dialog>
+    #sesion_no_iniciada
+    <dialog class="modal" id="sesion_no_iniciada">
+        <p>Usted no ha iniciado sesión.</p>
+        <button type="button" onclick="window.location.href = '../index.html' ">Volver a login.</button>
+    </dialog>
     <footer id="footer"></footer>
 </body>
 <script src="../scripts/adminUsuario.js"></script>

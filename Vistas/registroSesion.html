@@ -43,7 +43,18 @@
             <p>¿Ya tienes una cuenta? <a class="link" href="../index.html">Iniciar Sesión</a></p>
         </div>
     </form>
-
+    <dialog class="modal" id="datos_son_obligatorios">
+        <p>Todos los campos son obligatorios.</p>
+        <button type="button" onclick="closeModal('#datos_son_obligatorios')">Cerrar</button>
+    </dialog>
+    <dialog class="modal" id="correo_ya_registrado">
+        <p>Este correo ya se encuentra registrado.</p>
+        <button type="button" onclick="closeModal('#correo_ya_registrado')">Cerrar</button>
+    </dialog>
+    <dialog class="modal" id="registro_exitoso">
+        <p>Registro exitoso! Puede iniciar sesión!</p>
+        <button type="button" onclick="window.location.href = '../index.html'">Volver a login.</button>
+    </dialog>
 </body>
 <script src="../scripts/adminUsuario.js"></script>
 </html>

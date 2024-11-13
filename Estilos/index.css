@@ -34,7 +34,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
-
+.modal
+{
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+}
 .inputContenedor img {
     width: 1rem;
 }

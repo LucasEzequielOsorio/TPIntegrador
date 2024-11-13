@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     agregarProductoACarrito(curso.nombre, curso.precio, curso.modalidad, contadorPersonas);
                     abrirSidebar();
                 } else {
-                    alert("Por favor complete todos los campos antes de continuar.");
+                    openModal("#datos_son_obligatorios");
                 }
             });
         }

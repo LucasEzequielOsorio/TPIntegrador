@@ -122,6 +122,14 @@
             </div>
         </div>
     </section>
+    <dialog class="modal" id="usuario_no_registrado">
+        <p>No se encontró un usuario con ese correo electrónico.</p>
+        <button type="button" onclick="closeModal('#usuario_no_registrado')">Cerrar</button>
+    </dialog>
+    <dialog class="modal" id="datos_son_obligatorios">
+        <p>Todos los campos son obligatorios.</p>
+        <button type="button" onclick="closeModal('#datos_son_obligatorios')">Cerrar</button>
+    </dialog>
     <footer id="footer"></footer>
 </body>
 <script src="../scripts/tema.js"></script>

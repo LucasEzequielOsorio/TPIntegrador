@@ -40,7 +40,23 @@
             <p>¿Ya tienes una cuenta? <a class="link" href="../index.html">Iniciar Sesión</a></p>
         </div>
     </form>
-
+    <dialog class="modal" id="datos_son_obligatorios">
+        <p>Todos los campos son obligatorios.</p>
+        <button type="button" onclick="closeModal('#datos_son_obligatorios')">Cerrar</button>
+    </dialog>
+    <dialog class="modal" id="contrasenias_no_coinciden">
+        <p>Las contraseñas no coinciden.</p>
+        <button type="button" onclick="closeModal('#contrasenias_no_coinciden')">Cerrar</button>
+    </dialog>
+    <dialog class="modal" id="usuario_no_registrado">
+        <p>Este usuario no se encuentra registrado. Debe registrarse!</p>
+        <button type="button" onclick="closeModal('#usuario_no_registrado')">Cerrar</button>
+        <button type="button" onclick="window.location.href = './registroSesion.html'">Ir a registrarme</button>
+    </dialog>
+    <dialog class="modal" id="contrasenia_restablecida">
+        <p>Contraseña restablecida exitosamente.</p>
+        <button type="button" onclick="window.location.href='../index.html'">Ir a inicio de sesión</button>
+    </dialog>
 </body>
 <script src="../scripts/adminUsuario.js"></script>
 </html>

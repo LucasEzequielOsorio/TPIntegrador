@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Se valida el nombre y apellido
         if (nombre.value.trim() === '' || apellido.value.trim() === '') {
-            alert('El nombre y el apellido no pueden estar vacíos.');
+            openModal("#nombre_y_apellido_obligatorios");
             return;
         }
 
         // Validar email
         if (!emailRegex.test(email.value)) {
-            alert('Por favor, ingrese un correo electrónico válido.');
+            openModal("#correo_invalido");
             return;
         }
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (telefono.value.trim() !== '') {
             const telefonoRegex = /^\d{4}-?\d{4}$/;
             if (!telefonoRegex.test(telefono.value)) {
-                alert('Debe ingresar un número de teléfono válido en formato: xxxx-xxxx o xxxxxxxx.');
+                openModal("#telefono_invalido");
                 return;
             }
         }

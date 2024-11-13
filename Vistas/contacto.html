@@ -58,7 +58,18 @@
         <h2>UBICACIÓN</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.982300508205!2d-58.377743535057036!3d-34.60460907112849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc483c17a3%3A0xcf3b9e6c01637a0c!2sFlorida%2C%20C1005%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1727035938231!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
-
+    <dialog class="modal" id="nombre_y_apellido_obligatorios">
+        <p>El nombre y apellido son obligatorios.</p>
+        <button type="button" onclick="closeModal('#nombre_y_apellido_obligatorios')">Cerrar</button>
+    </dialog>
+    <dialog class="modal" id="correo_invalido">
+        <p>Por favor, inserte un correo válido.</p>
+        <button type="button" onclick="closeModal('#correo_invalido')">Cerrar</button>
+    </dialog>
+    <dialog class="modal" id="telefono_invalido">
+        <p>Debe ingresar un número de teléfono válido en formato: xxxx-xxxx o xxxxxxxx.</p>
+        <button type="button" onclick="closeModal('#telefono_invalido')">Cerrar</button>
+    </dialog>
     <footer id="footer"></footer>
 </body>
 <script src="../scripts/tema.js"></script>

@@ -23,6 +23,10 @@ const header = `
             </datalist>
         <button type="submit">Buscar</button>
     </form>
+    <dialog class="modal" id="curso_no_encontrado">
+        <p>Curso no encontrado. Por favor, seleccione uno de la lista.</p>
+        <button type="button" onclick="closeModal('#curso_no_encontrado')">Cerrar</button>
+    </dialog>
     <button type="button" onclick="abrirSidebar()" class="cart_logo"><span id="contador_cursos_carrito">0</span></button>
     <div id="cart_sidebar">
         <button type="button" onclick="cerrarSidebar()" id="close_sidebar_button">X</button>
@@ -109,7 +113,7 @@ function buscarCurso(event) {
         // Redirige al HTML correspondiente si coinciden
         window.location.href = `../vistasDetallesCursos/${paginaCurso}`;
     } else {
-        alert("Curso no encontrado. Por favor, seleccione uno de la lista.");
+        openModal("#curso_no_encontrado");
     }
 }
 
@@ -243,4 +247,16 @@ function cargarActiveUserAUsers()
     var userIndex = users.findIndex(user => user.email === activeUser.email);
     users[userIndex] = activeUser;
     localStorage.setItem("users", JSON.stringify(users));
+}
+
+const openModal = (modalId) =>
+{
+    let modal = document.querySelector(modalId);
+    modal.showModal(); 
+}
+
+const closeModal = (modalId) =>
+{
+    let modal = document.querySelector(modalId);
+    modal.close(); 
 }
